@@ -5,7 +5,7 @@ const LoginAmor = ({ onConfirm }) => {
     const [confirmed, setConfirmed] = useState(false);
     const [naoClicks, setNaoClicks] = useState(0);
 
-    const mensagens = ['Pense bem antes de responder <3', 'Tem certeza?', 'Pense novamente...', 'Fui mais esperto que você'];
+    const mensagens = ['Pense bem antes de responder <3', 'VOCÊ ME AMA?', 'Pense novamente...', 'Fui mais esperto que você'];
 
     const handleNao = () => {
         if (naoClicks < 3) setNaoClicks(prev => prev + 1);
@@ -25,7 +25,7 @@ const LoginAmor = ({ onConfirm }) => {
                         onClick={() => { setConfirmed(true); onConfirm?.(); }}
                         className="px-7 py-2 rounded-lg  border-4 border-pink-300 text-pink-600 font-medium  transition hover:scale-110 transition-all ease-in-out hover:cursor-pointer"
                     >
-                        Sim 💕
+                        Amo 💕
                     </button>
 
                     <button
