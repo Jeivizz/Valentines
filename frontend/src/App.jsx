@@ -18,6 +18,7 @@ const HeartIcon = ({ size = 24, strokeWidth = 1, color = "currentColor", classNa
         <path d="M12 21.593 C8 18 2 14 2 8.5 C2 5.42 4.42 3 7.5 3 C9.24 3 10.91 3.81 12 6.5 C13.09 3.81 14.76 3 16.5 3 C19.58 3 22 5.42 22 8.5 C22 14 16 18 12 21.593 Z" />
     </svg>
 );
+document.body.style.backgroundColor = '#eb3434';
 
 function App() {
     const [amor, setAmor] = useState(false);
