@@ -52,7 +52,7 @@ const Envelope = () => {
 
 
                 <div
-                    className="z-30 absolute h-full w-full transition-all duration-500 origin-top shadow-xl-black"
+                    className="z-30 absolute h-full w-full transition-all duration-300 origin-top shadow-xl-black"
                     style={{
                         willChange: 'transform',
                         clipPath: 'polygon(0% 0%, 100% 0, 100% 4%, 50% 60%, 0 4%)',

@@ -28,7 +28,7 @@ function App() {
     }, [amor]);
 
     return (
-        <main className="relative min-h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4">
+        <main className="relative h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4">
             {!amor && <LoginAmor onConfirm={() => setAmor(true)} />}
             <Envelope />
             <h1 className="text-xs md:text-sm">Eu sabia! Obrigado por me fazer tão feliz.</h1>
