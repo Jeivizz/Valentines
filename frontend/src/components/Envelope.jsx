@@ -30,11 +30,14 @@ const Envelope = () => {
     };
 
     return (
-        <div className="relative w-full max-w-lg aspect-4/3 flex flex-col items-center justify-center" style={{ perspective: '800px' }}>
+        <div className="relative w-full max-w-lg aspect-4/3 flex flex-col items-center justify-center" style={{ perspective: '1200px', perspectiveOrigin: '50% 0%' }}>
             <div
                 className={`relative w-full h-full bg-[#eb3434] cursor-pointer overflow-visible transition-all duration-500 rounded-b-3xl  transform-gpu
                 ${state !== 'fechado' ? 'translate-y-20' : 'translate-y-0'}`}
-                style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,}}
+                style={{
+                    transformStyle: 'preserve-3d',
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,
+                }}
                 onClick={handleEnvelopeClick}
             >
 
@@ -54,13 +57,14 @@ const Envelope = () => {
                 <div
                     className="z-30 absolute h-full w-full transition-all duration-300 origin-top shadow-xl-black"
                     style={{
-                        willChange: 'transform',
-                        clipPath: 'polygon(0% 0%, 100% 0, 100% 4%, 50% 60%, 0 4%)',
                         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E"),
                                           linear-gradient(to bottom, #eb3434, #ff8585)`,
-                        transform: state !== 'fechado' ? 'scaleY(-1)' : 'scaleY(1)',
-                        zIndex: (state !== 'fechado') ? 0 : 30,
-                        transitionDelay: (state !== 'fechado') ? '150ms' : '0ms'
+                        willChange: 'transform',
+                        transformStyle: 'preserve-3d',
+                        clipPath: 'polygon(0% 0%, 100% 0, 100% 4%, 50% 60%, 0 4%)',
+                        transform: state !== 'fechado' ? 'rotateX(180deg)' : 'rotateX(0deg)',
+                        zIndex: state !== 'fechado' ? 0 : 30,
+                        transitionDelay: state !== 'fechado' ? '150ms' : '0ms'
                     }}
                 >
                 </div>
