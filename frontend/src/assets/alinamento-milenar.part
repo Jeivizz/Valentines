@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
+    <script>
+    (function(){var t=localStorage.getItem('musify-theme')||'blue-grey';var m=localStorage.getItem('musify-mode');document.documentElement.setAttribute('data-theme',t);if(m==='dark')document.documentElement.setAttribute('data-mode','dark');else document.documentElement.removeAttribute('data-mode');})();
+    </script>
+
+    <script>
+    (function(){try{var m=document.cookie.match(/(?:^|;\s*)geo_city=([^;]+)/);if(m){var c=decodeURIComponent(m[1]).toLowerCase();if(c)document.documentElement.setAttribute('data-geo-city',c);}}catch(e){}})();
+    </script>
+
+    <script>(function(){try{var E='/diagnostic/jserror',M=5,D=5e3,T=6e4,c=0,q=[],fp={},fc=0,t=null;function fl(){if(!q.length)return;var p=JSON.stringify(q.splice(0));try{navigator.sendBeacon?navigator.sendBeacon(E,new Blob([p],{type:'application/json'})):(new XMLHttpRequest).open('POST',E,!0)||(new XMLHttpRequest).send(p)}catch(e){}}function sc(){if(!t)t=setTimeout(function(){t=null;fl()},D)}function r(m,f,l,cl,s){try{if(!m)return;if(f&&f.indexOf(location.origin)!==0&&f!=='promise')return;if(c>=M)return;var k=m+'|'+(f||'')+'|'+(l||0);if(fp[k])return;if(fc>=200){fp={};fc=0}fp[k]=1;fc++;setTimeout(function(){if(fp[k]){delete fp[k];fc--}},T);c++;q.push({m:m,f:f||'',l:l||0,c:cl||0,s:s||'',u:location.href,t:Date.now()});sc()}catch(e){}}window.addEventListener('error',function(e){r(e.message,e.filename,e.lineno,e.colno,e.error&&e.error.stack)});window.addEventListener('unhandledrejection',function(e){var v=e.reason,m=v&&v.message?v.message:String(v);r(m,'promise',0,0,v&&v.stack||'')});document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'){if(t){clearTimeout(t);t=null}fl()}})}catch(e){}}())</script>
+
+    <script>(function(){try{var E='/api/v/p';if(navigator.webdriver)return;function send(k){try{var b={path:location.pathname||'/',r:document.referrer||'',kind:k||'full',sw:window.innerWidth||0,sh:window.innerHeight||0,t:Date.now()};var p=JSON.stringify(b);if(navigator.sendBeacon){navigator.sendBeacon(E,new Blob([p],{type:'application/json'}))}else{var x=new XMLHttpRequest();x.open('POST',E,true);x.setRequestHeader('Content-Type','application/json');x.send(p)}}catch(e){}}function fire(k){setTimeout(function(){send(k)},250+Math.random()*750)}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){fire('full')})}else{fire('full')}document.addEventListener('pjax:loaded',function(){fire('pjax')})}catch(e){}}())</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>&#x412;&#x445;&#x43E;&#x434; / &#x440;&#x435;&#x433;&#x438;&#x441;&#x442;&#x440;&#x430;&#x446;&#x438;&#x44F; - Musify</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/static/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/static/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/static/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/static/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/static/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/static/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/static/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    
+
+    <meta property="og:site_name" content="Musify" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+
+    <link rel="preconnect" href="https://38s.musify.club">
+    <link rel="preconnect" href="https://39s.musify.club">
+    <link rel="dns-prefetch" href="https://37ts.musify.club">
+    <link rel="dns-prefetch" href="https://37s.musify.club">
+    <link rel="dns-prefetch" href="https://40s.musify.club">
+    <link rel="dns-prefetch" href="https://41s.musify.club">
+    <link rel="dns-prefetch" href="https://yastatic.net">
+
+    <script>(function(){var c=document.cookie.match(/(?:^|;\s*)ut=([^;]*)/);var u=document.cookie.match(/(?:^|;\s*)uc=1/);var v=document.cookie.match(/(?:^|;\s*)uvi=1/);var s='ut-'+(c?c[1]:'g');if(u)s+=' uc';if(v)s+=' uvi';document.documentElement.className=s})()</script>
+
+    <script>window.MusifyPage={_pending:[],register:function(k,f){this._pending.push({key:k,init:f});return function(){};},runReady:function(){},runCleanup:function(){},getContext:function(){return null;}};</script>
+
+    <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="/static/assets/main.C21K49dc.css">
+
+        <link rel="canonical" href="https://musify.club/login?ReturnUrl=%2Ftrack%2Fdl%2F19956298%2Fjao-alinhamento-milenar.mp3" />
+                <link rel="alternate" hreflang="ru" href="https://musify.club/login?ReturnUrl=%2Ftrack%2Fdl%2F19956298%2Fjao-alinhamento-milenar.mp3" />
+        <link rel="alternate" hreflang="en" href="https://musify.club/en/login?ReturnUrl=%2Ftrack%2Fdl%2F19956298%2Fjao-alinhamento-milenar.mp3" />
+        <link rel="alternate" hreflang="tr" href="https://musify.club/tr/login?ReturnUrl=%2Ftrack%2Fdl%2F19956298%2Fjao-alinhamento-milenar.mp3" />
+        <link rel="alternate" hreflang="x-default" href="https://musify.club/login?ReturnUrl=%2Ftrack%2Fdl%2F19956298%2Fjao-alinhamento-milenar.mp3" />
+
+            <meta name="robots" content="noindex, follow" />
+    
+    <link rel="help" type="text/plain" href="/llms.txt" />
+</head>
+<body data-layout="full" class="bg-surface-body text-text-primary font-sans min-h-screen">
+
+<div class="main">
+
+    <header class="header fixed top-0 inset-x-0 h-13 bg-accent supports-[backdrop-filter]:bg-accent/95 backdrop-blur z-20 shadow-[0_1px_4px_rgba(0,0,0,0.1)] flex items-center px-3 md:px-4">
+        <a href="/" class="shrink-0 mr-2">
+            <img title="Musify" alt="&#x421;&#x43A;&#x430;&#x447;&#x430;&#x442;&#x44C; &#x438; &#x441;&#x43B;&#x443;&#x448;&#x430;&#x442;&#x44C; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x443; &#x43E;&#x43D;&#x43B;&#x430;&#x439;&#x43D; - Musify" src="https://s.musify.club/images/logo-t.png" width="125" height="32">
+        </a>
+
+        
+<div data-widget="search-overlay" class="flex items-center">
+
+    <button type="button" data-search-trigger
+            class="md:hidden flex items-center justify-center w-10 h-10 text-white/80 hover:text-white"
+            aria-label="&#x41F;&#x43E;&#x438;&#x441;&#x43A; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x438;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+
+    </button>
+
+    <div data-search-panel hidden
+         class="absolute inset-0 z-40 bg-surface-primary md:hidden flex items-center gap-2 px-3 anim-fade-in">
+
+        <button type="button" data-search-close
+                class="flex items-center justify-center w-10 h-10 text-text-secondary shrink-0"
+                aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+
+        </button>
+
+        <form method="get" data-widget="search-suggest" class="flex-1" itemscope itemtype="https://schema.org/WebSite" action="/search">
+            <link itemprop="url" content="https://musify.club" />
+            <meta itemprop="target" content="https://musify.club/search?searchText={SearchText}" />
+            <meta itemprop="query-input" content="required name=SearchText" />
+            <div itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+                <input type="text" data-search-input
+                       class="w-full h-10 px-3 bg-surface-tertiary rounded text-[15px] text-text-primary placeholder:text-text-faint outline-none focus:ring-2 focus:ring-accent"
+                       autocomplete="off" id="SearchTextMobile" name="SearchText"
+                       value="" placeholder="&#x41F;&#x43E;&#x438;&#x441;&#x43A; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x438;">
+            </div>
+        </form>
+    </div>
+
+    <div class="hidden md:flex flex-1 mx-4 max-w-[640px]" itemscope itemtype="https://schema.org/WebSite">
+        <link itemprop="url" content="https://musify.club" />
+        <form method="get" data-widget="search-suggest" class="w-full" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction" action="/search">
+            <meta itemprop="target" content="https://musify.club/search?searchText={SearchText}" />
+            <meta itemprop="query-input" content="required name=SearchText" />
+            <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+
+                </span>
+                <input type="text"
+                       class="w-full h-10 pl-10 pr-3 bg-white/[0.18] rounded text-[15px] text-white placeholder:text-white/60 outline-none transition-colors duration-200 focus:bg-surface-primary focus:text-text-primary focus:placeholder:text-text-faint"
+                       autocomplete="off" id="SearchText" name="SearchText"
+                       value="" placeholder="&#x41F;&#x43E;&#x438;&#x441;&#x43A; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x438;">
+            </div>
+        </form>
+    </div>
+</div>
+
+        
+
+<div data-widget="nav" class="contents">
+
+    <nav class="hidden xl:flex items-center gap-1">
+        <a href="/hits" data-nav-link data-nav-match="prefix" class="nav-link">&#x422;&#x41E;&#x41F; &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</a>
+        <a href="/top" data-nav-link data-nav-match="prefix" class="nav-link">&#x422;&#x41E;&#x41F; &#x440;&#x435;&#x43B;&#x438;&#x437;&#x43E;&#x432;</a>
+        <a href="/artist" data-nav-link data-nav-match="prefix" class="nav-link">&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;</a>
+        <a href="/albums" data-nav-link data-nav-match="prefix" class="nav-link">&#x410;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x44B;</a>
+        <a href="/compilations" data-nav-link data-nav-match="prefix" class="nav-link">&#x421;&#x431;&#x43E;&#x440;&#x43D;&#x438;&#x43A;&#x438;</a>
+        <a href="/soundtracks" data-nav-link data-nav-match="prefix" class="nav-link">&#x421;&#x430;&#x443;&#x43D;&#x434;&#x442;&#x440;&#x435;&#x43A;&#x438;</a>
+        <a href="/theme" data-nav-link data-nav-match="prefix" class="nav-link">&#x41F;&#x43B;&#x435;&#x439;&#x43B;&#x438;&#x441;&#x442;&#x44B;</a>
+    </nav>
+
+    <nav class="hidden md:flex xl:hidden items-center gap-0.5">
+        <a href="/hits" data-nav-link data-nav-match="prefix" title="&#x422;&#x41E;&#x41F; &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+</svg>
+
+        </a>
+        <a href="/top" data-nav-link data-nav-match="prefix" title="&#x422;&#x41E;&#x41F; &#x440;&#x435;&#x43B;&#x438;&#x437;&#x43E;&#x432;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+  <path d="M4 22h16" />
+  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+</svg>
+
+        </a>
+        <a href="/artist" data-nav-link data-nav-match="prefix" title="&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="10" r="3" />
+  <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+</svg>
+
+        </a>
+        <a href="/albums" data-nav-link data-nav-match="prefix" title="&#x410;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x44B;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <path d="M6 12c0-1.7.7-3.2 1.8-4.2" />
+  <circle cx="12" cy="12" r="2" />
+  <path d="M18 12c0 1.7-.7 3.2-1.8 4.2" />
+</svg>
+
+        </a>
+        <a href="/compilations" data-nav-link data-nav-match="prefix" title="&#x421;&#x431;&#x43E;&#x440;&#x43D;&#x438;&#x43A;&#x438;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg>
+
+        </a>
+        <a href="/soundtracks" data-nav-link data-nav-match="prefix" title="&#x421;&#x430;&#x443;&#x43D;&#x434;&#x442;&#x440;&#x435;&#x43A;&#x438;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M9 18V5l12-2v13" />
+  <circle cx="6" cy="18" r="3" />
+  <circle cx="18" cy="16" r="3" />
+</svg>
+
+        </a>
+        <a href="/theme" data-nav-link data-nav-match="prefix" title="&#x41F;&#x43B;&#x435;&#x439;&#x43B;&#x438;&#x441;&#x442;&#x44B;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M3 5h.01" />
+  <path d="M3 12h.01" />
+  <path d="M3 19h.01" />
+  <path d="M8 5h13" />
+  <path d="M8 12h13" />
+  <path d="M8 19h13" />
+</svg>
+
+        </a>
+    </nav>
+
+    <nav class="hidden min-[425px]:flex md:hidden items-center gap-0.5 ml-auto mr-2">
+        <a href="/hits" data-nav-link data-nav-match="prefix" title="&#x422;&#x41E;&#x41F; &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+</svg>
+
+        </a>
+        <a href="/top" data-nav-link data-nav-match="prefix" title="&#x422;&#x41E;&#x41F; &#x440;&#x435;&#x43B;&#x438;&#x437;&#x43E;&#x432;" class="nav-icon-link hidden min-[500px]:inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+  <path d="M4 22h16" />
+  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+</svg>
+
+        </a>
+        <a href="/artist" data-nav-link data-nav-match="prefix" title="&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="10" r="3" />
+  <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+</svg>
+
+        </a>
+        <a href="/albums" data-nav-link data-nav-match="prefix" title="&#x410;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x44B;" class="nav-icon-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <path d="M6 12c0-1.7.7-3.2 1.8-4.2" />
+  <circle cx="12" cy="12" r="2" />
+  <path d="M18 12c0 1.7-.7 3.2-1.8 4.2" />
+</svg>
+
+        </a>
+    </nav>
+</div>
+
+
+        <div class="flex items-center gap-1 ml-auto shrink-0">
+            <span class="inline-flex items-center shrink-0 mr-1 h-8 px-2.5 select-none rounded-lg border border-white/40 text-sm font-semibold leading-none text-white/90"
+                  aria-label="18+">18+</span>
+
+            <div class="auth-show" data-widget="profile-dropdown">
+                <a href="/profile/edit" data-profile-trigger aria-haspopup="true" aria-expanded="false"
+                   class="flex items-center justify-center w-11 h-11"
+                   data-profile-avatar-trigger>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide text-white/80">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="10" r="3" />
+  <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+</svg>
+
+                </a>
+            </div>
+
+            <a href="/login" data-widget="auth-return-url" data-login-popover-trigger
+               class="guest-only nav-cta" aria-haspopup="dialog" aria-expanded="false"
+               title="&#x412;&#x43E;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="10" r="3" />
+  <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+</svg>
+
+                <span>&#x412;&#x43E;&#x439;&#x442;&#x438;</span>
+            </a>
+        </div>
+    </header>
+
+    
+<aside class="login-popover guest-only" data-widget="login-popover" hidden
+       role="dialog" aria-labelledby="loginPopoverTitle" aria-modal="false">
+    <div class="login-popover__head">
+        <div class="login-popover__avatar" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="10" r="3" />
+  <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+</svg>
+
+        </div>
+        <p id="loginPopoverTitle" class="login-popover__title">
+            &#x412;&#x43E;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442;
+        </p>
+        <button type="button" class="login-popover__close" data-login-close
+                aria-label="&#x417;&#x430;&#x43A;&#x440;&#x44B;&#x442;&#x44C;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg>
+
+        </button>
+    </div>
+
+    <form method="post" action="/login/password" class="login-popover__form" data-login-form data-csrf-attached="true" data-needs-csrf="true">
+        <input type="hidden" name="ReturnUrl" data-login-return-url value="" />
+
+        <div class="login-popover__field">
+            <label for="loginPopoverIdentifier" class="login-popover__label">
+                &#x41B;&#x43E;&#x433;&#x438;&#x43D; &#x438;&#x43B;&#x438; email
+            </label>
+            <input type="text" id="loginPopoverIdentifier" name="Identifier"
+                   class="login-popover__input"
+                   autocomplete="username"
+                   spellcheck="false" required
+                   data-login-identifier />
+        </div>
+
+        <div class="login-popover__field">
+            <label for="loginPopoverPassword" class="login-popover__label">
+                &#x41F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;
+            </label>
+            <input type="password" id="loginPopoverPassword" name="Password"
+                   class="login-popover__input"
+                   autocomplete="current-password" required
+                   data-login-password />
+        </div>
+
+        <div class="login-popover__error" data-login-error hidden role="alert"></div>
+
+        <button type="submit" class="login-popover__submit" data-login-submit
+                aria-label="&#x412;&#x43E;&#x439;&#x442;&#x438;">
+            <span class="login-popover__submit-label">&#x412;&#x43E;&#x439;&#x442;&#x438;</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+
+        </button>
+
+        <div class="login-popover__links">
+            <a href="/signup" data-no-pjax>&#x421;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x430;&#x43A;&#x43A;&#x430;&#x443;&#x43D;&#x442;</a>
+            <span aria-hidden="true">·</span>
+            <a href="/passwordrecovery" data-no-pjax>&#x417;&#x430;&#x431;&#x44B;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;?</a>
+        </div>
+    </form>
+
+        <div class="login-popover__social">
+            <div class="login-popover__social-rule">
+                <span>&#x418;&#x43B;&#x438; &#x432;&#x43E;&#x439;&#x442;&#x438; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E;</span>
+            </div>
+            <div class="login-popover__social-grid">
+                    <a href="/oauth/google/start"
+                       class="login-popover__social-btn"
+                       data-no-pjax
+                       rel="nofollow"
+                       title="Google"
+                       aria-label="Google">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="currentColor" class="brand-icon "
+     aria-hidden="true">
+  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+</svg>
+
+                    </a>
+                    <a href="/oauth/vk/start"
+                       class="login-popover__social-btn"
+                       data-no-pjax
+                       rel="nofollow"
+                       title="VK"
+                       aria-label="VK">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="currentColor" class="brand-icon "
+     aria-hidden="true">
+  <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.15 14.27h-1.45c-.55 0-.72-.44-1.7-1.43-.86-.85-1.22-.96-1.43-.96-.29 0-.37.08-.37.48v1.31c0 .34-.11.55-1 .55-1.48 0-3.12-.9-4.28-2.57-1.74-2.43-2.22-4.26-2.22-4.64 0-.2.08-.39.48-.39h1.46c.35 0 .48.16.62.54.71 2.06 1.91 3.87 2.4 3.87.18 0 .27-.08.27-.55v-2.15c-.06-1-.59-1.08-.59-1.43 0-.17.14-.34.37-.34h2.29c.3 0 .4.16.4.51v2.88c0 .29.13.4.21.4.19 0 .34-.11.68-.45.96-1.08 1.65-2.74 1.65-2.74.09-.2.24-.38.59-.38h1.45c.44 0 .53.23.44.55-.19.85-1.97 3.35-1.97 3.35-.15.24-.21.35 0 .62.15.21.66.64.99 1.03.62.69 1.1 1.28 1.23 1.69.11.4-.09.62-.51.62z"/>
+</svg>
+
+                    </a>
+                    <a href="/oauth/yandex/start"
+                       class="login-popover__social-btn"
+                       data-no-pjax
+                       rel="nofollow"
+                       title="Yandex"
+                       aria-label="Yandex">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" class="brand-icon "
+     aria-hidden="true">
+  <text x="12" y="20" text-anchor="middle" font-size="22" font-weight="800"
+        font-family="'Inter', system-ui, sans-serif" fill="currentColor">Я</text>
+</svg>
+
+                    </a>
+            </div>
+
+                    </div>
+</aside>
+
+
+    <aside class="user-login-summary" data-profile-aside>
+        <div class="guest-only">
+            <a href="/login" data-widget="auth-return-url" class="btn btn-primary">&#x412;&#x43E;&#x439;&#x442;&#x438; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442;</a>
+            <a href="/signup" data-widget="auth-return-url" class="btn btn-default">&#x421;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x430;&#x43A;&#x43A;&#x430;&#x443;&#x43D;&#x442;</a>
+        </div>
+        <div class="auth-show user-summary" data-profile-card>
+            <a data-profile-link href="#">
+                <div class="user-summary__info">
+                    <div class="user-summary__avatar-slot" data-profile-avatar-slot></div>
+                    <div class="min-w-0 flex-1">
+                        <div class="user-summary__name">
+                            <span data-profile-name>&nbsp;</span>
+                            <span class="vip-badge" data-profile-vip-badge hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide ">
+  <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.78 5.5a.5.5 0 0 1 .76.583L19.91 17.4a2 2 0 0 1-1.99 1.6H6.08a2 2 0 0 1-1.99-1.6L1.46 6.083a.5.5 0 0 1 .76-.583l4.873 3.664a1 1 0 0 0 1.516-.294z" />
+  <path d="M5 21h14" />
+</svg>
+
+                                <span class="vip-badge__label">Premium</span>
+                                <span class="vip-badge__suffix" data-profile-vip-suffix aria-hidden="true" hidden>∞</span>
+                            </span>
+                        </div>
+                        <div class="user-summary__rating">
+                            &#x420;&#x435;&#x439;&#x442;&#x438;&#x43D;&#x433;: <span data-profile-rating>—</span>
+                        </div>
+                        <div class="user-summary__status">
+                            &#x410;&#x43A;&#x43A;&#x430;&#x443;&#x43D;&#x442;: <span data-profile-status>—</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="user-summary__links">
+                <a class="user-summary__link-item" href="/mailmessage/list">
+                    &#x421;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; <span class="user-summary__badge" data-profile-mail-badge hidden></span>
+                </a>
+                <a class="user-summary__link-item" href="/albumcomment/newcomments">
+                    &#x41A;&#x43E;&#x43C;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x440;&#x438;&#x438; <span class="user-summary__badge" data-profile-comment-badge hidden></span>
+                </a>
+            </div>
+            <div class="user-summary__links">
+                <a class="user-summary__link-item" href="/upload">&#x414;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;</a>
+                <a class="user-summary__link-item" href="/quest" data-profile-quest hidden>&#x41A;&#x432;&#x435;&#x441;&#x442;&#x44B;</a>
+                <a class="user-summary__link-item" href="/playlist/my">&#x41C;&#x43E;&#x438; &#x43F;&#x43B;&#x435;&#x439;&#x43B;&#x438;&#x441;&#x442;&#x44B;</a>
+                <a class="user-summary__link-item" href="/votes">&#x41E;&#x446;&#x435;&#x43D;&#x43A;&#x438;</a>
+                <a class="user-summary__link-item" href="/favorites">&#x418;&#x437;&#x431;&#x440;&#x430;&#x43D;&#x43D;&#x43E;&#x435;</a>
+                <a class="user-summary__link-item" href="/feed">&#x41B;&#x435;&#x43D;&#x442;&#x430;</a>
+            </div>
+            <div class="user-summary__links">
+                <a class="user-summary__link-item" href="/profile/edit">&#x420;&#x435;&#x434;&#x430;&#x43A;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x444;&#x438;&#x43B;&#x44C;</a>
+                <a class="user-summary__link-item no-ajaxy" href="/logout" data-widget="auth-return-url">&#x412;&#x44B;&#x445;&#x43E;&#x434;</a>
+            </div>
+        </div>
+    </aside>
+
+    <section class="content pt-[60px] pb-[calc(104px+env(safe-area-inset-bottom))] md:pb-16 max-w-[1280px] mx-auto px-2 sm:px-4 md:px-5">
+        <div id="bodyContent" class="contents">
+                <div class="flex gap-5 items-start">
+                    <main class="flex-1 min-w-0">
+                        
+<div class="max-w-md mx-auto bg-surface-primary rounded-lg shadow-level-1 p-6 sm:p-8 my-8">
+    <h1 class="text-2xl font-semibold text-text-primary mb-2">&#x412;&#x43E;&#x439;&#x442;&#x438; &#x438;&#x43B;&#x438; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x430;&#x43A;&#x43A;&#x430;&#x443;&#x43D;&#x442;</h1>
+    <p class="text-sm text-text-muted mb-6">&#x41C;&#x44B; &#x43F;&#x440;&#x438;&#x448;&#x43B;&#x435;&#x43C; &#x441;&#x441;&#x44B;&#x43B;&#x43A;&#x443; &#x434;&#x43B;&#x44F; &#x432;&#x445;&#x43E;&#x434;&#x430; &#x43D;&#x430; &#x43F;&#x43E;&#x447;&#x442;&#x443;</p>
+
+
+    <div class="mb-4 text-sm text-red-600 validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+    <form method="post" action="/login/password" id="login-form" novalidate>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AFoVkngMflMrncWhzOuf5W7_XZCa5wnEt4FsjMxXdH55J_eub8-Vox9wrsP6OaxcP78CnwQ5sFF_-TybZ1bjEHmDTI12eenP36DR-VMBJg_x0lFW9KdJRDjbaJBgeiv8DgDTVhjJqI2-gFshRCEvQc" />
+        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/track/dl/19956298/jao-alinhamento-milenar.mp3" />
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-text-primary mb-1" for="Identifier">
+                Email &#x438;&#x43B;&#x438; &#x438;&#x43C;&#x44F; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;
+            </label>
+            <input type="text" autocomplete="username" autofocus required class="w-full rounded border border-border bg-surface-body px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent" data-val="true" data-val-required="The Identifier field is required." id="Identifier" name="Identifier" value="" />
+            <span class="mt-1 block text-xs text-red-600 field-validation-valid" data-valmsg-for="Identifier" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="Password" class="block text-sm font-medium text-text-primary mb-1">
+                &#x41F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;
+            </label>
+            <input id="Password" name="Password"
+                   type="password"
+                   autocomplete="current-password"
+                   required
+                   class="w-full rounded border border-border bg-surface-body px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent" />
+        </div>
+
+
+        <button type="submit"
+                class="w-full rounded bg-accent px-4 py-2 font-medium text-white hover:opacity-90 transition-opacity">
+            &#x412;&#x43E;&#x439;&#x442;&#x438;
+        </button>
+
+        <div class="mt-3 flex items-center justify-between text-sm">
+            <a href="/signup" class="text-text-muted hover:text-text-primary hover:underline">
+                &#x421;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x430;&#x43A;&#x43A;&#x430;&#x443;&#x43D;&#x442;
+            </a>
+            <a href="/password-recovery" class="text-text-muted hover:text-text-primary hover:underline">
+                &#x417;&#x430;&#x431;&#x44B;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;?
+            </a>
+        </div>
+
+        <div class="mt-3 text-center text-sm">
+            <a href="/magic-link/request" class="text-accent hover:underline">
+                &#x41F;&#x440;&#x438;&#x441;&#x43B;&#x430;&#x442;&#x44C; &#x441;&#x441;&#x44B;&#x43B;&#x43A;&#x443; &#x434;&#x43B;&#x44F; &#x432;&#x445;&#x43E;&#x434;&#x430; &#x43D;&#x430; &#x43F;&#x43E;&#x447;&#x442;&#x443;
+            </a>
+        </div>
+    </form>
+
+    
+<div class="mt-6">
+    <div class="flex items-center gap-3 mb-4">
+        <div class="flex-1 h-px bg-border"></div>
+        <span class="text-xs uppercase tracking-wide text-text-muted">&#x418;&#x43B;&#x438; &#x432;&#x43E;&#x439;&#x442;&#x438; &#x447;&#x435;&#x440;&#x435;&#x437;</span>
+        <div class="flex-1 h-px bg-border"></div>
+    </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <a href="/oauth/google/start"
+                   class="flex items-center justify-center gap-2 rounded border border-border bg-surface-primary px-4 py-2 text-sm text-text-primary hover:bg-surface-secondary transition-colors"
+                   rel="nofollow">
+                    
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="currentColor" class="brand-icon "
+     aria-hidden="true">
+  <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+</svg>
+
+                    <span>Google</span>
+                </a>
+                <a href="/oauth/vk/start"
+                   class="flex items-center justify-center gap-2 rounded border border-border bg-surface-primary px-4 py-2 text-sm text-text-primary hover:bg-surface-secondary transition-colors"
+                   rel="nofollow">
+                    
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" fill="currentColor" class="brand-icon "
+     aria-hidden="true">
+  <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.15 14.27h-1.45c-.55 0-.72-.44-1.7-1.43-.86-.85-1.22-.96-1.43-.96-.29 0-.37.08-.37.48v1.31c0 .34-.11.55-1 .55-1.48 0-3.12-.9-4.28-2.57-1.74-2.43-2.22-4.26-2.22-4.64 0-.2.08-.39.48-.39h1.46c.35 0 .48.16.62.54.71 2.06 1.91 3.87 2.4 3.87.18 0 .27-.08.27-.55v-2.15c-.06-1-.59-1.08-.59-1.43 0-.17.14-.34.37-.34h2.29c.3 0 .4.16.4.51v2.88c0 .29.13.4.21.4.19 0 .34-.11.68-.45.96-1.08 1.65-2.74 1.65-2.74.09-.2.24-.38.59-.38h1.45c.44 0 .53.23.44.55-.19.85-1.97 3.35-1.97 3.35-.15.24-.21.35 0 .62.15.21.66.64.99 1.03.62.69 1.1 1.28 1.23 1.69.11.4-.09.62-.51.62z"/>
+</svg>
+
+                    <span>VK</span>
+                </a>
+                <a href="/oauth/yandex/start"
+                   class="flex items-center justify-center gap-2 rounded border border-border bg-surface-primary px-4 py-2 text-sm text-text-primary hover:bg-surface-secondary transition-colors"
+                   rel="nofollow">
+                    
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+     viewBox="0 0 24 24" class="brand-icon "
+     aria-hidden="true">
+  <text x="12" y="20" text-anchor="middle" font-size="22" font-weight="800"
+        font-family="'Inter', system-ui, sans-serif" fill="currentColor">Я</text>
+</svg>
+
+                    <span>Yandex</span>
+                </a>
+        </div>
+            <div class="mt-3 flex items-center justify-center">
+            <script src="/js/auth/telegram-widget.js"></script>
+            <script async src="https://telegram.org/js/telegram-widget.js?22"
+                    data-telegram-login="musify_premium_bot"
+                    data-size="large"
+                    data-onauth="onTelegramAuth(user)"
+                    data-request-access="write"></script>
+        </div>
+</div>
+
+</div>
+
+
+                        
+                    </main>
+                    <aside class="left-sidebar hidden md:block md:w-[220px] lg:w-[280px] shrink-0 space-y-3">
+
+<div class="auth-show">
+    
+</div>
+
+<div class="bg-surface-primary rounded shadow-level-1">
+    <div class="p-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wide text-text-muted mb-3">&#x41F;&#x43E;&#x43F;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x44B;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;</h3>
+        <div class="space-y-1">
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/korol-i-shut-76588">
+                        <picture><source srcset="https://40s.musify.club/img/70/25412682/63792162.webp" type="image/webp" /><img src="https://40s.musify.club/img/70/25412682/63792162.jpg" alt="&#x41A;&#x43E;&#x440;&#x43E;&#x43B;&#x44C; &#x438; &#x428;&#x443;&#x442;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x41A;&#x43E;&#x440;&#x43E;&#x43B;&#x44C; &#x438; &#x428;&#x443;&#x442;</div>
+                        <p class="text-xs text-text-muted">2540 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/rammstein-937">
+                        <picture><source srcset="https://40s.musify.club/img/70/25412622/63792075.webp" type="image/webp" /><img src="https://40s.musify.club/img/70/25412622/63792075.jpg" alt="Rammstein" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Rammstein</div>
+                        <p class="text-xs text-text-muted">7707 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/leningrad-71003">
+                        <picture><source srcset="https://40s.musify.club/img/70/25412665/63792119.webp" type="image/webp" /><img src="https://40s.musify.club/img/70/25412665/63792119.jpg" alt="&#x41B;&#x435;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x41B;&#x435;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;</div>
+                        <p class="text-xs text-text-muted">1655 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/pink-floyd-235">
+                        <picture><source srcset="https://38s.musify.club/img/71/30408332/75247640.webp" type="image/webp" /><img src="https://38s.musify.club/img/71/30408332/75247640.jpg" alt="Pink Floyd" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Pink Floyd</div>
+                        <p class="text-xs text-text-muted">8662 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/kino-25537">
+                        <picture><source srcset="https://37s.musify.club/img/69/25969238/64947758.webp" type="image/webp" /><img src="https://37s.musify.club/img/69/25969238/64947758.jpg" alt="&#x41A;&#x438;&#x43D;&#x43E;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x41A;&#x438;&#x43D;&#x43E;</div>
+                        <p class="text-xs text-text-muted">5960 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/linkin-park-5">
+                        <picture><source srcset="https://39s.musify.club/img/68/25102361/62958672.webp" type="image/webp" /><img src="https://39s.musify.club/img/68/25102361/62958672.jpg" alt="Linkin Park" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Linkin Park</div>
+                        <p class="text-xs text-text-muted">10113 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/deep-purple-1190">
+                        <picture><source srcset="https://39s.musify.club/img/68/21602843/54836167.webp" type="image/webp" /><img src="https://39s.musify.club/img/68/21602843/54836167.jpg" alt="Deep Purple" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Deep Purple</div>
+                        <p class="text-xs text-text-muted">6749 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/david-guetta-608">
+                        <picture><source srcset="https://39s.musify.club/img/68/21602761/54836062.webp" type="image/webp" /><img src="https://39s.musify.club/img/68/21602761/54836062.jpg" alt="David Guetta" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">David Guetta</div>
+                        <p class="text-xs text-text-muted">4081 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/vladimir-visotskii-90531">
+                        <picture><source srcset="https://38s.musify.club/img/68/21638788/54903095.webp" type="image/webp" /><img src="https://38s.musify.club/img/68/21638788/54903095.jpg" alt="&#x412;&#x43B;&#x430;&#x434;&#x438;&#x43C;&#x438;&#x440; &#x412;&#x44B;&#x441;&#x43E;&#x446;&#x43A;&#x438;&#x439;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x412;&#x43B;&#x430;&#x434;&#x438;&#x43C;&#x438;&#x440; &#x412;&#x44B;&#x441;&#x43E;&#x446;&#x43A;&#x438;&#x439;</div>
+                        <p class="text-xs text-text-muted">7434 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/grigorii-leps-97816">
+                        <picture><source srcset="https://39s.musify.club/img/69/21563345/54758019.webp" type="image/webp" /><img src="https://39s.musify.club/img/69/21563345/54758019.jpg" alt="&#x413;&#x440;&#x438;&#x433;&#x43E;&#x440;&#x438;&#x439; &#x41B;&#x435;&#x43F;&#x441;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x413;&#x440;&#x438;&#x433;&#x43E;&#x440;&#x438;&#x439; &#x41B;&#x435;&#x43F;&#x441;</div>
+                        <p class="text-xs text-text-muted">1838 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/metallica-923">
+                        <picture><source srcset="https://39s.musify.club/img/68/21911351/56087227.webp" type="image/webp" /><img src="https://39s.musify.club/img/68/21911351/56087227.jpg" alt="Metallica" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Metallica</div>
+                        <p class="text-xs text-text-muted">9489 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/artist/depeche-mode-6">
+                        <picture><source srcset="https://39s.musify.club/img/70/21490611/54611978.webp" type="image/webp" /><img src="https://39s.musify.club/img/70/21490611/54611978.jpg" alt="Depeche Mode" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" decoding="async" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Depeche Mode</div>
+                        <p class="text-xs text-text-muted">10772 &#x442;&#x440;&#x435;&#x43A;&#x43E;&#x432;</p>
+                    </div>
+                </a>
+        </div>
+        <a class="view-more" href="/artist">&#x412;&#x441;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;</a>
+    </div>
+</div>
+
+<div class="auth-show">
+    
+<div class="bg-surface-primary rounded shadow-level-1">
+    <div class="p-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wide text-text-muted mb-3">&#x422;&#x43E;&#x43F; &#x430;&#x43F;&#x43B;&#x43E;&#x430;&#x434;&#x435;&#x440;&#x43E;&#x432;</h3>
+        <div class="space-y-1">
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/46952/yorik">
+                        <picture><source srcset="https://41s.musify.club/img/71/25389041/63746406.webp" type="image/webp" /><img src="https://41s.musify.club/img/71/25389041/63746406.jpg" alt="Yorik" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Yorik</div>
+                        <p class="text-xs text-text-muted">1834963</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/885458/mkhl">
+                        <picture><source srcset="https://40s.musify.club/img/69/24539566/61968751.webp" type="image/webp" /><img src="https://40s.musify.club/img/69/24539566/61968751.jpg" alt="mkhl" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">mkhl</div>
+                        <p class="text-xs text-text-muted">931029</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/1230698/garik-r">
+                        <picture><source srcset="https://40s.musify.club/img/70/24847815/62496948.webp" type="image/webp" /><img src="https://40s.musify.club/img/70/24847815/62496948.jpg" alt="Garik R" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Garik R</div>
+                        <p class="text-xs text-text-muted">884333</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/1218738/melomanstarr">
+                        <picture><source srcset="https://41s.musify.club/img/70/29456003/72444267.webp" type="image/webp" /><img src="https://41s.musify.club/img/70/29456003/72444267.jpg" alt="&#x41C;&#x435;&#x43B;&#x43E;&#x43C;&#x430;&#x43D;&#x421;&#x442;&#x430;&#x440;&#x440;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x41C;&#x435;&#x43B;&#x43E;&#x43C;&#x430;&#x43D;&#x421;&#x442;&#x430;&#x440;&#x440;</div>
+                        <p class="text-xs text-text-muted">739845</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/1019257/kind-angel">
+                        <picture><source srcset="https://41s.musify.club/img/68/13738175/35318853.webp" type="image/webp" /><img src="https://41s.musify.club/img/68/13738175/35318853.jpg" alt="Kind angel" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Kind angel</div>
+                        <p class="text-xs text-text-muted">689188</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/278891/savage1205">
+                        <picture><source srcset="https://38s.musify.club/img/70/6896031/19805111.webp" type="image/webp" /><img src="https://38s.musify.club/img/70/6896031/19805111.jpg" alt="savage1205" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">savage1205</div>
+                        <p class="text-xs text-text-muted">620000</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/510617/murlonya">
+                        <picture><source srcset="https://39s.musify.club/img/70/5886915/17938056.webp" type="image/webp" /><img src="https://39s.musify.club/img/70/5886915/17938056.jpg" alt="&#x43C;&#x443;&#x440;&#x43B;&#x43E;&#x43D;&#x44F;" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x43C;&#x443;&#x440;&#x43B;&#x43E;&#x43D;&#x44F;</div>
+                        <p class="text-xs text-text-muted">494951</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/453106/lift55">
+                        <picture><source srcset="https://41s.musify.club/img/68/13162214/33998558.webp" type="image/webp" /><img src="https://41s.musify.club/img/68/13162214/33998558.jpg" alt="lift55" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">lift55</div>
+                        <p class="text-xs text-text-muted">484123</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/269946/nehoroshev74">
+                        <picture><source srcset="https://39s.musify.club/img/70/5843025/17849556.webp" type="image/webp" /><img src="https://39s.musify.club/img/70/5843025/17849556.jpg" alt="nehoroshev74" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">nehoroshev74</div>
+                        <p class="text-xs text-text-muted">466824</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" rel="nofollow" href="/user/462448/disiel-77">
+                        <picture><source srcset="https://39s.musify.club/img/70/11765191/30952509.webp" type="image/webp" /><img src="https://39s.musify.club/img/70/11765191/30952509.jpg" alt="disiel 77" class="w-10 h-10 rounded-full object-cover shrink-0" width="48" height="48" loading="lazy" /></picture></picture-img>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">disiel 77</div>
+                        <p class="text-xs text-text-muted">453618</p>
+                    </div>
+                </a>
+        </div>
+        <a href="/users" class="view-more">&#x422;&#x43E;&#x43F;-300 &#x430;&#x43F;&#x43B;&#x43E;&#x430;&#x434;&#x435;&#x440;&#x43E;&#x432;</a>
+    </div>
+</div>
+
+</div>
+
+<div class="bg-surface-primary rounded shadow-level-1">
+    <div class="p-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wide text-text-muted mb-3">&#x41F;&#x43E;&#x43F;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x44B;&#x435; &#x436;&#x430;&#x43D;&#x440;&#x44B;</h3>
+        <div class="genre-image-grid">
+                <a class="genre-image-tile" href="/genre/hard-rock-28">
+                    <img src="https://s.musify.club/images/genres/28__hard-rock.webp" alt="Hard Rock" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/pop-11">
+                    <img src="https://s.musify.club/images/genres/11__pop.webp" alt="Pop" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/disco-25">
+                    <img src="https://s.musify.club/images/genres/25__disco.webp" alt="Disco" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/heavy-metal-30">
+                    <img src="https://s.musify.club/images/genres/30__heavy-metal.webp" alt="Heavy Metal" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/blues-rock-158">
+                    <img src="https://s.musify.club/images/genres/158__blues-rock.webp" alt="Blues Rock" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/rock-1">
+                    <img src="https://s.musify.club/images/genres/1__rock.webp" alt="Rock" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/eurodance-234">
+                    <img src="https://s.musify.club/images/genres/234__eurodance.webp" alt="Eurodance" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/synthpop-21">
+                    <img src="https://s.musify.club/images/genres/21__synthpop.webp" alt="Synthpop" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/trance-12">
+                    <img src="https://s.musify.club/images/genres/12__trance.webp" alt="Trance" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/thrash-metal-67">
+                    <img src="https://s.musify.club/images/genres/67__thrash-metal.webp" alt="Thrash Metal" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/rap-8">
+                    <img src="https://s.musify.club/images/genres/8__rap.webp" alt="Rap" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+                <a class="genre-image-tile" href="/genre/russkii-shanson-267">
+                    <img src="https://s.musify.club/images/genres/267__.webp" alt="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439; &#x448;&#x430;&#x43D;&#x441;&#x43E;&#x43D;" class="genre-image-tile__img" loading="lazy" width="150" height="150" onerror="this.src='https://s.musify.club/images/genres/default.webp'" />
+                </a>
+        </div>
+        <a class="view-more" href="/genre">&#x412;&#x441;&#x435; &#x436;&#x430;&#x43D;&#x440;&#x44B;</a>
+    </div>
+</div>
+
+
+
+<div class="bg-surface-primary rounded shadow-level-1">
+    <div class="p-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wide text-text-muted mb-3">&#x41C;&#x43E;&#x435; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43D;&#x438;&#x435;</h3>
+        <div class="flex flex-wrap gap-2">
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/workout-1">#Workout</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/sleep-2">#Sleep</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/relax-3">#Relax</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/romantic-4">#Romantic</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/summer-5">#Summer</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/coffee-7">#Coffee</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/love-8">#Love</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/meditation-9">#Meditation</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/christmas-10">#Christmas</a>
+                <a class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-accent hover:text-white transition-colors" href="/tag/motivation-11">#Motivation</a>
+        </div>
+        <a href="/tag" class="view-more">&#x412;&#x441;&#x435; &#x43F;&#x43E;&#x434;&#x431;&#x43E;&#x440;&#x43A;&#x438;</a>
+    </div>
+</div>
+
+<div class="auth-show">
+    
+        
+<div class="bg-surface-primary rounded shadow-level-1">
+    <div class="p-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wide text-text-muted mb-3">&#x41F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x438;&#x435; &#x43A;&#x43E;&#x43C;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x440;&#x438;&#x438;</h3>
+        <div class="space-y-1">
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/kiss-i-finally-found-my-way-master-and-slave-1998-814083#messages">
+                    <picture><source srcset="https://41s.musify.club/img/69/12477315/33613575.webp" type="image/webp" /><img src="https://41s.musify.club/img/69/12477315/33613575.jpg" alt="I Finally Found My Way / Master &amp; Slave" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">KISS MY SASS <span class="text-xs text-text-muted">4 &#x43C;&#x438;&#x43D;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="KISS &#x2014; &#x43A;&#x443;&#x43B;&#x44C;&#x442;&#x443;&#x440;&#x43D;&#x430;&#x44F; &#x438;&#x43A;&#x43E;&#x43D;&#x430;. &#x41A; 1998 &#x433;&#x43E;&#x434;&#x443; &#x43E;&#x43D;&#x438; &#x443;&#x436;&#x435; &#x431;&#x44B;&#x43B;&#x438; &#x43B;&#x435;&#x433;&#x435;&#x43D;&#x434;&#x430;&#x43C;&#x438; &#x433;&#x43B;&#x44D;&#x43C;&#x2011;&#x43C;&#x435;&#x442;&#x430;&#x43B;&#x430; &#x438; &#x445;&#x430;&#x440;&#x434;&#x2011;&#x440;&#x43E;&#x43A;&#x430;, &#x437;&#x430;&#x434;&#x430;&#x432;&#x448;&#x438;&#x43C;&#x438; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x44B; &#x441;&#x446;&#x435;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x448;&#x43E;&#x443;, &#x438;&#x43C;&#x438;&#x434;&#x436;&#x430; &#x438; &#x44D;&#x43D;&#x435;&#x440;&#x433;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x437;&#x432;&#x443;&#x447;&#x430;&#x43D;&#x438;&#x44F;. &#x410;&#x43B;&#x44C;&#x431;&#x43E;&#x43C; &#xAB;Psycho Circus&#xBB; &#x441;&#x442;&#x430;&#x43B; &#x442;&#x440;&#x438;&#x443;&#x43C;&#x444;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x440;&#x435;&#x44E;&#x43D;&#x44C;&#x43E;&#x43D;&#x43E;&#x43C; &#x438; &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x43A; &#x43A;&#x43E;&#x440;&#x43D;&#x44F;&#x43C;: &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x430;&#x43D;&#x442;&#x44B; &#x432;&#x43D;&#x43E;&#x432;&#x44C; &#x43D;&#x430;&#x43D;&#x435;&#x441;&#x43B;&#x438; &#x433;&#x440;&#x438;&#x43C;, &#x430; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x430; &#x43E;&#x431;&#x440;&#x435;&#x43B;&#x430; &#x43F;&#x440;&#x435;&#x436;&#x43D;&#x44E;&#x44E; &#x43C;&#x43E;&#x449;&#x44C;. &#x413;&#x440;&#x443;&#x43F;&#x43F;&#x430; &#x434;&#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43B;&#x430;, &#x447;&#x442;&#x43E; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x441;&#x43E;&#x447;&#x435;&#x442;&#x430;&#x442;&#x44C; &#x442;&#x435;&#x430;&#x442;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; 70&#x2011;&#x445; &#x441; &#x441;&#x43E;&#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x437;&#x432;&#x443;&#x43A;&#x43E;&#x43C; 90&#x2011;&#x445;. &#x421;&#x438;&#x43D;&#x433;&#x43B; &#xAB;I Finally Found My Way&#xBB; &#x441; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x430; &#xAB;Psycho Circus&#xBB; &#x431;&#x44B;&#x43B; &#x442;&#x440;&#x435;&#x442;&#x44C;&#x438;&#x43C; &#x43F;&#x43E; &#x441;&#x447;&#x451;&#x442;&#x443; &#x438; &#x432;&#x44B;&#x43F;&#x443;&#x449;&#x435;&#x43D; &#x432; &#x43D;&#x43E;&#x44F;&#x431;&#x440;&#x435; 1998 &#x433;&#x43E;&#x434;&#x430;. &#xAB;I Finally Found My Way&#xBB; &#x2014; &#x43F;&#x440;&#x43E;&#x43D;&#x437;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x430;&#x44F;, &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x430;&#x440;&#x44F;&#x436;&#x435;&#x43D;&#x43D;&#x430;&#x44F; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x430;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x430;&#x44F; &#x440;&#x430;&#x441;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x43D;&#x43E;&#x432;&#x443;&#x44E; &#x433;&#x440;&#x430;&#x43D;&#x44C; &#x43C;&#x43E;&#x449;&#x438; KISS. &#x42D;&#x442;&#x43E; &#x43D;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x442;&#x440;&#x435;&#x43A;, &#x430; &#x438;&#x441;&#x43F;&#x43E;&#x432;&#x435;&#x434;&#x44C; &#x434;&#x443;&#x448;&#x438;, &#x43E;&#x431;&#x43B;&#x435;&#x447;&#x451;&#x43D;&#x43D;&#x430;&#x44F; &#x432; &#x440;&#x43E;&#x441;&#x43A;&#x43E;&#x448;&#x43D;&#x443;&#x44E; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x444;&#x43E;&#x440;&#x43C;&#x443;. &#x41F;&#x435;&#x441;&#x43D;&#x44F; &#x434;&#x43E;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442;, &#x447;&#x442;&#x43E; KISS &#x443;&#x43C;&#x435;&#x44E;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x43D;&#x435; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x433;&#x440;&#x43E;&#x43C;&#x43E;&#x433;&#x43B;&#x430;&#x441;&#x43D;&#x44B;&#x43C;&#x438;, &#x43D;&#x43E; &#x438; &#x433;&#x43B;&#x443;&#x431;&#x43E;&#x43A;&#x43E; &#x43B;&#x438;&#x440;&#x438;&#x447;&#x43D;&#x44B;&#x43C;&#x438;. &#x416;&#x430;&#x43D;&#x440;&#x43E;&#x432;&#x44B;&#x439; &#x441;&#x442;&#x438;&#x43B;&#x44C;: &#x416;&#x430;&#x43D;&#x440;: &#x441;&#x438;&#x43C;&#x444;&#x43E;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x430;, &#x445;&#x430;&#x440;&#x434;&#x2011;&#x440;&#x43E;&#x43A; &#x441; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x43C;&#x438; &#x430;&#x440;&#x435;&#x43D;&#x430;&#x2011;&#x440;&#x43E;&#x43A;&#x430;. &#x423;&#x447;&#x430;&#x441;&#x442;&#x43D;&#x438;&#x43A;&#x438; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x438; &#x438; &#x438;&#x445; &#x432;&#x43A;&#x43B;&#x430;&#x434;: &#x41F;&#x438;&#x442;&#x435;&#x440; &#x41A;&#x440;&#x438;&#x441;&#x441; (Peter Criss) &#x2014; &#x432;&#x43E;&#x43A;&#x430;&#x43B; &#x2014; &#x435;&#x433;&#x43E; &#x43F;&#x440;&#x43E;&#x43D;&#x438;&#x43A;&#x43D;&#x43E;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x435;, &#x441; &#x444;&#x438;&#x440;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x430;&#x43A;&#x446;&#x435;&#x43D;&#x442;&#x43E;&#x43C; &#x43D;&#x430; &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x43F;&#x43E;&#x434;&#x430;&#x447;&#x443; &#x43B;&#x438;&#x440;&#x438;&#x43A;&#x438;, &#x43D;&#x430;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x442; &#x442;&#x440;&#x435;&#x43A; &#x43F;&#x43E;&#x434;&#x43B;&#x438;&#x43D;&#x43D;&#x43E;&#x439; &#x438;&#x441;&#x43A;&#x440;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E;; &#x41F;&#x43E;&#x43B; &#x421;&#x442;&#x44D;&#x43D;&#x43B;&#x438; (Paul Stanley) &#x2014; &#x430;&#x43A;&#x443;&#x441;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x433;&#x438;&#x442;&#x430;&#x440;&#x430;, &#x431;&#x44D;&#x43A;-&#x432;&#x43E;&#x43A;&#x430;&#x43B;, &#x433;&#x43B;&#x430;&#x432;&#x43D;&#x44B;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x440; &#x43F;&#x435;&#x441;&#x43D;&#x438; &#x2014; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x451;&#x442; &#x442;&#x451;&#x43F;&#x43B;&#x43E;&#x435;, &#x43C;&#x435;&#x43B;&#x43E;&#x434;&#x438;&#x447;&#x43D;&#x43E;&#x435; &#x441;&#x43E;&#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x435;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435; &#x441;&#x442;&#x430;&#x43B;&#x43E; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43E;&#x439; &#x434;&#x43B;&#x44F; &#x43B;&#x438;&#x440;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x44B;. &#x41E;&#x43D; &#x43F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x430;&#x43B; &#x432;&#x43E;&#x43A;&#x430;&#x43B; &#x41A;&#x440;&#x438;&#x441;&#x441;&#x430; &#x433;&#x430;&#x440;&#x43C;&#x43E;&#x43D;&#x438;&#x447;&#x43D;&#x44B;&#x43C;&#x438; &#x431;&#x44D;&#x43A;-&#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C;&#x438; &#x43F;&#x430;&#x440;&#x442;&#x438;&#x44F;&#x43C;&#x438;; Bruce Kulick (&#x411;&#x440;&#x44E;&#x441; &#x41A;&#x443;&#x43B;&#x438;&#x43A;) &#x2014; &#x431;&#x430;&#x441;&#x2011;&#x433;&#x438;&#x442;&#x430;&#x440;&#x430; &#x2014; &#x437;&#x432;&#x443;&#x447;&#x438;&#x442; &#x440;&#x43E;&#x432;&#x43D;&#x43E; &#x438; &#x43C;&#x44F;&#x433;&#x43A;&#x43E;, &#x441; &#x440;&#x438;&#x442;&#x43C;&#x43E;&#x43C; &#x438; &#x43F;&#x43E;&#x434;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x43E;&#x439; &#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x430; &#x41A;&#x440;&#x438;&#x441;&#x441;&#x430;, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x432;&#x430;&#x44F; &#x443;&#x441;&#x442;&#x43E;&#x439;&#x447;&#x438;&#x432;&#x44B;&#x439; &#x433;&#x440;&#x443;&#x432; &#x438; &#x433;&#x430;&#x440;&#x43C;&#x43E;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x443;&#x44E; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x443; &#x434;&#x43B;&#x44F; &#x43C;&#x435;&#x43B;&#x43E;&#x434;&#x438;&#x438;; &#x41A;&#x435;&#x432;&#x438;&#x43D; &#x412;&#x430;&#x43B;&#x435;&#x43D;&#x442;&#x430;&#x439;&#x43D; (Kevin Valentine) &#x2014; &#x443;&#x434;&#x430;&#x440;&#x43D;&#x44B;&#x435; &#x2014; &#x447;&#x451;&#x442;&#x43A;&#x430;&#x44F;, &#x441;&#x434;&#x435;&#x440;&#x436;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x438;&#x433;&#x440;&#x430; &#x43F;&#x43E;&#x434;&#x447;&#x451;&#x440;&#x43A;&#x438;&#x432;&#x430;&#x435;&#x442; &#x434;&#x440;&#x430;&#x43C;&#x430;&#x442;&#x438;&#x437;&#x43C; &#x43F;&#x435;&#x441;&#x43D;&#x438;, &#x43D;&#x435; &#x43E;&#x442;&#x432;&#x43B;&#x435;&#x43A;&#x430;&#x44F; &#x43E;&#x442; &#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x430;; &#x428;&#x435;&#x43B;&#x43B;&#x438; &#x411;&#x435;&#x440;&#x433; (Shelly Berg) &#x2014; &#x430;&#x43A;&#x443;&#x441;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435; &#x43F;&#x438;&#x430;&#x43D;&#x438;&#x43D;&#x43E;, &#x43E;&#x440;&#x43A;&#x435;&#x441;&#x442;&#x440;&#x43E;&#x432;&#x43A;&#x430;, &#x434;&#x438;&#x440;&#x438;&#x436;&#x451;&#x440;. &#x420;&#x43E;&#x441;&#x43A;&#x43E;&#x448;&#x43D;&#x44B;&#x435; &#x444;&#x43E;&#x440;&#x442;&#x435;&#x43F;&#x438;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x438; &#x43E;&#x440;&#x43A;&#x435;&#x441;&#x442;&#x440;&#x43E;&#x432;&#x44B;&#x435; &#x430;&#x440;&#x430;&#x43D;&#x436;&#x438;&#x440;&#x43E;&#x432;&#x43A;&#x438; &#x43F;&#x440;&#x435;&#x432;&#x440;&#x430;&#x449;&#x430;&#x44E;&#x442; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x443; &#x432; &#x43B;&#x430;&#x43A;&#x43E;&#x43D;&#x438;&#x447;&#x43D;&#x443;&#x44E;, &#x438;&#x437;&#x44F;&#x449;&#x43D;&#x443;&#x44E; &#x441;&#x438;&#x43C;&#x444;&#x43E;&#x43D;&#x438;&#x44E;; &#x411;&#x43E;&#x431; &#x42D;&#x437;&#x440;&#x438;&#x43D; (Bob Ezrin) &#x2014; Fender Rhodes (&#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435; &#x43F;&#x438;&#x430;&#x43D;&#x438;&#x43D;&#x43E;), &#x441;&#x43E;&#x430;&#x432;&#x442;&#x43E;&#x440; &#x43F;&#x435;&#x441;&#x43D;&#x438;. &#x415;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x432;&#x438;&#x448;&#x43D;&#x44B;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x43B;&#x438;&#x432;&#x44B; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x442; &#x442;&#x440;&#x435;&#x43A;&#x443; &#x430;&#x442;&#x43C;&#x43E;&#x441;&#x444;&#x435;&#x440;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x438; &#x433;&#x43B;&#x443;&#x431;&#x438;&#x43D;&#x44B;. &#x421;&#x430;&#x43C; &#x421;&#x442;&#x44D;&#x43D;&#x43B;&#x438; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x43B;, &#x447;&#x442;&#x43E; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B; &#x43D;&#x430;&#x434; &#x43F;&#x435;&#x441;&#x43D;&#x435;&#x439; &#x432;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x441; &#x43F;&#x440;&#x43E;&#x434;&#x44E;&#x441;&#x435;&#x440;&#x43E;&#x43C; &#x42D;&#x437;&#x440;&#x438;&#x43D;&#x43E;&#x43C;. &#x41E;&#x43D;&#x438; &#x446;&#x435;&#x43B;&#x435;&#x43D;&#x430;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x43E; &#x43F;&#x438;&#x441;&#x430;&#x43B;&#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x437;&#x438;&#x446;&#x438;&#x44E;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x430;&#x44F; &#x431;&#x44B; &#x438;&#x434;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x43F;&#x43E;&#x434;&#x43E;&#x448;&#x43B;&#x430; &#x433;&#x43E;&#x43B;&#x43E;&#x441;&#x443; &#x438; &#x441;&#x442;&#x438;&#x43B;&#x44E; &#x41A;&#x440;&#x438;&#x441;&#x441;&#x430;. &#x421;&#x442;&#x44D;&#x43D;&#x43B;&#x438; &#x432;&#x441;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x43B;, &#x447;&#x442;&#x43E; &#x41A;&#x440;&#x438;&#x441;&#x441;, &#x443;&#x441;&#x43B;&#x44B;&#x448;&#x430;&#x432; &#x434;&#x435;&#x43C;&#x43E;&#x432;&#x435;&#x440;&#x441;&#x438;&#x44E; &#x441; &#x435;&#x433;&#x43E; &#x441;&#x43E;&#x431;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x43E;&#x43C;, &#x442;&#x449;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x440;&#x430;&#x437;&#x443;&#x447;&#x438;&#x43B; &#x43F;&#x430;&#x440;&#x442;&#x438;&#x44E; &#x438;, &#x432; &#x441;&#x432;&#x43E;&#x44E; &#x43E;&#x447;&#x435;&#x440;&#x435;&#x434;&#x44C;, &#x441;&#x435;&#x440;&#x44C;&#x451;&#x437;&#x43D;&#x43E; &#x43E;&#x442;&#x43D;&#x451;&#x441;&#x441;&#x44F; &#x43A; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x438;, &#x441;&#x442;&#x430;&#x440;&#x430;&#x44F;&#x441;&#x44C; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x442;&#x438;&#x44E; &#x43A;&#x430;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43B;&#x443;&#x447;&#x448;&#x435;. &#xAB;I Finally Found My Way&#xBB; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x441;&#x432;&#x43E;&#x435;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x43D;&#x44B;&#x43C; &#x434;&#x443;&#x445;&#x43E;&#x432;&#x43D;&#x44B;&#x43C; &#x43F;&#x440;&#x435;&#x435;&#x43C;&#x43D;&#x438;&#x43A;&#x43E;&#x43C; &#xAB;Beth&#xBB; (1976) &#x2014; &#x435;&#x449;&#x451; &#x43E;&#x434;&#x43D;&#x43E;&#x439; &#x437;&#x43D;&#x430;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x445;&#x438;&#x442;&#x43E;&#x432;&#x43E;&#x439; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x43E;&#x439;, &#x433;&#x434;&#x435; &#x41A;&#x440;&#x438;&#x441;&#x441; &#x432;&#x44B;&#x441;&#x442;&#x443;&#x43F;&#x438;&#x43B; &#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x43E;&#x43C;. &#x411;&#x435;&#x437;&#x443;&#x43F;&#x440;&#x435;&#x447;&#x43D;&#x43E;&#x435; &#x43A;&#x430;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x437;&#x432;&#x443;&#x43A;&#x430;: &#x447;&#x438;&#x441;&#x442;&#x44B;&#x439; &#x432;&#x43E;&#x43A;&#x430;&#x43B;, &#x434;&#x435;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x43F;&#x440;&#x43E;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x44B;, &#x433;&#x430;&#x440;&#x43C;&#x43E;&#x43D;&#x438;&#x447;&#x43D;&#x43E;&#x435; &#x441;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435;. &#x41E;&#x440;&#x43A;&#x435;&#x441;&#x442;&#x440;&#x43E;&#x432;&#x43A;&#x430; &#x437;&#x432;&#x443;&#x447;&#x438;&#x442; &#x435;&#x441;&#x442;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;, &#x43D;&#x435; &#x437;&#x430;&#x442;&#x43C;&#x435;&#x432;&#x430;&#x44F; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x439; &#x432;&#x43E;&#x43A;&#x430;&#x43B;. &#x41F;&#x440;&#x43E;&#x43C;&#x43E;-&#x441;&#x438;&#x43D;&#x433;&#x43B; &#xAB;I Finally Found My Way&#xBB; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B; KISS &#x434;&#x43E;&#x431;&#x438;&#x43B;&#x441;&#x44F; &#x437;&#x430;&#x43C;&#x435;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x443;&#x441;&#x43F;&#x435;&#x445;&#x430;: &#x43E;&#x43D; &#x430;&#x43A;&#x442;&#x438;&#x432;&#x43D;&#x43E; &#x440;&#x43E;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43B;&#x441;&#x44F; &#x43D;&#x430; &#x440;&#x430;&#x434;&#x438;&#x43E;&#x441;&#x442;&#x430;&#x43D;&#x446;&#x438;&#x44F;&#x445; &#x432; &#x421;&#x428;&#x410; &#x438; &#x415;&#x432;&#x440;&#x43E;&#x43F;&#x435;, &#x437;&#x430;&#x432;&#x43E;&#x435;&#x432;&#x430;&#x432; &#x441;&#x435;&#x440;&#x434;&#x446;&#x430; &#x43A;&#x430;&#x43A; &#x43F;&#x43E;&#x43A;&#x43B;&#x43E;&#x43D;&#x43D;&#x438;&#x43A;&#x43E;&#x432; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B;, &#x442;&#x430;&#x43A; &#x438; &#x43B;&#x44E;&#x431;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x439; &#x440;&#x43E;&#x43A;-&#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;. &#x41F;&#x43E;&#x44F;&#x432;&#x438;&#x432;&#x448;&#x438;&#x441;&#x44C; &#x432; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x435;- &#x440;&#x435;&#x44E;&#x43D;&#x44C;&#x43E;&#x43D;&#x435; KISS &#xAB;Psycho Circus&#xBB;, &#x438;&#x437;&#x432;&#x435;&#x441;&#x442;&#x43D;&#x44B;&#x445; &#x43A;&#x430;&#x43A; &#x430;&#x433;&#x440;&#x435;&#x441;&#x441;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x438;, &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x430; &#xAB;I Finally Found My Way&#xBB; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x438;&#x43C; &#x43F;&#x440;&#x438;&#x44F;&#x442;&#x43D;&#x44B;&#x43C; &#x441;&#x44E;&#x440;&#x43F;&#x440;&#x438;&#x437;&#x43E;&#x43C;. &#x423;&#x441;&#x43F;&#x435;&#x445; &#x441;&#x438;&#x43D;&#x433;&#x43B;&#x430; &#x43F;&#x43E;&#x43C;&#x43E;&#x433; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;&#x443; &#xAB;Psycho Circus&#xBB; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;&#x44B;: &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x44C; &#x2014; 3 &#x43C;&#x435;&#x441;&#x442;&#x43E; &#x432; Billboard 200 &#x421;&#x428;&#x410;, 2 &#x43C;&#x435;&#x441;&#x442;&#x43E; &#x432; Rock &amp; Metal Singles Chart &#x438; Rock &amp; Metal Albums Chart &#x412;&#x435;&#x43B;&#x438;&#x43A;&#x43E;&#x431;&#x440;&#x438;&#x442;&#x430;&#x43D;&#x438;&#x438; &#x438; &#x43F;&#x43E;&#x43F;&#x430;&#x441;&#x442;&#x44C; &#x432; &#x442;&#x43E;&#x43F;&#x2011;5 &#x43D;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x447;&#x430;&#x440;&#x442;&#x43E;&#x432; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x438;&#x43D;&#x441;&#x442;&#x432;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D; &#x415;&#x432;&#x440;&#x43E;&#x43F;&#x44B;. &#x418;&#x442;&#x43E;&#x433;: &#x41F;&#x440;&#x43E;&#x43C;&#x43E;-&#x441;&#x438;&#x43D;&#x433;&#x43B; &#xAB;I Finally Found My Way&#xBB; &#x2014; &#x44D;&#x442;&#x43E; &#x433;&#x438;&#x43C;&#x43D; &#x43E;&#x431;&#x440;&#x435;&#x442;&#x451;&#x43D;&#x43D;&#x43E;&#x439; &#x43D;&#x430;&#x434;&#x435;&#x436;&#x434;&#x44B;, &#x440;&#x430;&#x441;&#x43A;&#x440;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x438;&#x439; KISS &#x441; &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x442;&#x43E;&#x440;&#x43E;&#x43D;&#x44B;. &#x42D;&#x442;&#x430; &#x43F;&#x440;&#x435;&#x43A;&#x440;&#x430;&#x441;&#x43D;&#x430;&#x44F; &#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434;&#x430; &#x43E;&#x431;&#x43B;&#x430;&#x434;&#x430;&#x435;&#x442; &#x432;&#x441;&#x435;&#x43C;&#x438; &#x438;&#x43D;&#x433;&#x440;&#x435;&#x434;&#x438;&#x435;&#x43D;&#x442;&#x430;&#x43C;&#x438; &#x43D;&#x430;&#x441;&#x442;&#x43E;&#x44F;&#x449;&#x435;&#x433;&#x43E; &#x445;&#x438;&#x442;&#x430;: &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x432;&#x43E;&#x43A;&#x430;&#x43B;&#x43E;&#x43C; &#x41F;&#x438;&#x442;&#x435;&#x440;&#x430; &#x41A;&#x440;&#x438;&#x441;&#x441;&#x430;, &#x437;&#x430;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x44E;&#x449;&#x435;&#x439;&#x441;&#x44F; &#x43C;&#x435;&#x43B;&#x43E;&#x434;&#x438;&#x435;&#x439;, &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x433;&#x43B;&#x443;&#x431;&#x438;&#x43D;&#x43E;&#x439; &#x438; &#x443;&#x43D;&#x438;&#x432;&#x435;&#x440;&#x441;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x43F;&#x43E;&#x441;&#x43B;&#x430;&#x43D;&#x438;&#x435;&#x43C;. &#xAB;I Finally Found My Way&#xBB; &#x437;&#x430;&#x43D;&#x44F;&#x43B;&#x430; &#x43F;&#x43E;&#x447;&#x451;&#x442;&#x43D;&#x43E;&#x435; &#x43C;&#x435;&#x441;&#x442;&#x43E; &#x432; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x438; &#x440;&#x43E;&#x43A;&#x2011;&#x431;&#x430;&#x43B;&#x43B;&#x430;&#x434; &#x438; &#x441;&#x442;&#x430;&#x43B;&#x430; &#x435;&#x449;&#x451; &#x43E;&#x434;&#x43D;&#x43E;&#x439; &#x437;&#x43D;&#x430;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x437;&#x438;&#x446;&#x438;&#x435;&#x439; &#x432; &#x434;&#x438;&#x441;&#x43A;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x438; KISS &#x2014; &#x432;&#x430;&#x436;&#x43D;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x44C;&#x44E; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x438;&#x44F; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B;, &#x434;&#x435;&#x43C;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x438;&#x440;&#x443;&#x44F; &#x435;&#x451; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43A; &#x44D;&#x43C;&#x43E;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x433;&#x43B;&#x443;&#x431;&#x438;&#x43D;&#x435;. &#x422;&#x435;&#x43C; &#x431;&#x43E;&#x43B;&#x435;&#x435;, &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x43A;&#x43B;&#x43E;&#x43D;&#x43D;&#x438;&#x43A;&#x43E;&#x432; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B;, &#x43E;&#x43D;&#x430; &#x443;&#x436;&#x435; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x434;&#x443;&#x445;&#x43E;&#x432;&#x43D;&#x44B;&#x43C; &#x43F;&#x440;&#x435;&#x435;&#x43C;&#x43D;&#x438;&#x43A;&#x43E;&#x43C; &#xAB;Beth&#xBB;, &#x438; &#x44D;&#x442;&#x43E; &#x43C;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x447;&#x435;&#x43C; &#x43E;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x430;&#x43D;&#x43E;. &#x41E;&#x440;&#x438;&#x433;&#x438;&#x43D;&#x430;&#x43B; &#x43E;&#x441;&#x442;&#x430;&#x451;&#x442;&#x441;&#x44F; &#x44D;&#x442;&#x430;&#x43B;&#x43E;&#x43D;&#x43E;&#x43C;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43D;&#x435; &#x43D;&#x443;&#x436;&#x434;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x432; &#x440;&#x430;&#x434;&#x438;&#x43E;&#x2011;&#x440;&#x435;&#x434;&#x430;&#x43A;&#x446;&#x438;&#x438; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x441;&#x448;&#x438;&#x440;&#x435;&#x43D;&#x438;&#x44F; &#x430;&#x443;&#x434;&#x438;&#x442;&#x43E;&#x440;&#x438;&#x438;. &#x42D;&#x442;&#x43E;&#x442; &#x441;&#x438;&#x43D;&#x433;&#x43B; &#x2014; &#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x437;&#x433;&#x43B;&#x430;&#x448;&#x435;&#x43D;&#x438;&#x435;: KISS &#x43F;&#x43E;&#x2011;&#x43F;&#x440;&#x435;&#x436;&#x43D;&#x435;&#x43C;&#x443; &#x43D;&#x430; &#x432;&#x435;&#x440;&#x448;&#x438;&#x43D;&#x435;, &#x438;&#x445; &#x43B;&#x438;&#x440;&#x438;&#x447;&#x43D;&#x430;&#x44F; &#x44D;&#x43D;&#x435;&#x440;&#x433;&#x438;&#x44F; &#x43D;&#x435; &#x443;&#x433;&#x430;&#x441;&#x43B;&#x430;, &#x430; &#x442;&#x430;&#x43B;&#x430;&#x43D;&#x442; &#x2014; &#x43D;&#x435;&#x43F;&#x440;&#x435;&#x432;&#x437;&#x43E;&#x439;&#x434;&#x451;&#x43D;! :113-kiss-2: :019-tongue-4:">KISS — культурная икона. К 1998 году они уже были легендами глэм‑метала и хард‑рока, задавшими стандарты сценического шоу, имиджа и энергичного звучания. Альбом «Psycho Circus» стал триумфальным реюньоном и возвращением к корням: музыканты вновь нанесли грим, а музыка обрела прежнюю мощь. Группа доказала, что может сочетать театральность 70‑х с современным звуком 90‑х. Сингл «I Finally Found My Way» с альбома «Psycho Circus» был третьим по счёту и выпущен в ноябре 1998 года. «I Finally Found My Way» — пронзительная, эмоционально заряженная баллада, которая раскрывает новую грань мощи KISS. Это не просто трек, а исповедь души, облечённая в роскошную музыкальную форму. Песня доказывает, что KISS умеют быть не только громогласными, но и глубоко лиричными. Жанровый стиль: Жанр: симфоническая баллада, хард‑рок с элементами арена‑рока. Участники записи и их вклад: Питер Крисс (Peter Criss) — вокал — его проникновенное исполнение, с фирменным акцентом на эмоциональную подачу лирики, наполняет трек подлинной искренностью; Пол Стэнли (Paul Stanley) — акустическая гитара, бэк-вокал, главный автор песни — создаёт тёплое, мелодичное сопровождение, которое стало основой для лиричной баллады. Он поддержал вокал Крисса гармоничными бэк-вокальными партиями; Bruce Kulick (Брюс Кулик) — бас‑гитара — звучит ровно и мягко, с ритмом и поддержкой вокала Крисса, создавая устойчивый грув и гармоническую основу для мелодии; Кевин Валентайн (Kevin Valentine) — ударные — чёткая, сдержанная игра подчёркивает драматизм песни, не отвлекая от вокала; Шелли Берг (Shelly Berg) — акустическое пианино, оркестровка, дирижёр. Роскошные фортепианные линии и оркестровые аранжировки превращают балладу в лаконичную, изящную симфонию; Боб Эзрин (Bob Ezrin) — Fender Rhodes (электрическое пианино), соавтор песни. Его клавишные переливы добавляют треку атмосферности и глубины. Сам Стэнли рассказывал, что работал над песней вместе с продюсером Эзрином. Они целенаправленно писали композицию, которая бы идеально подошла голосу и стилю Крисса. Стэнли вспоминал, что Крисс, услышав демоверсию с его собственным вокалом, тщательно разучил партию и, в свою очередь, серьёзно отнёсся к записи, стараясь исполнить партию как можно лучше. «I Finally Found My Way» стала своеобразным духовным преемником «Beth» (1976) — ещё одной знаковой хитовой балладой, где Крисс выступил вокалистом. Безупречное качество звука: чистый вокал, детально проработанные инструменты, гармоничное сведение. Оркестровка звучит естественно, не затмевая основной вокал. Промо-сингл «I Finally Found My Way» группы KISS добился заметного успеха: он активно ротировался на радиостанциях в США и Европе, завоевав сердца как поклонников группы, так и любителей рок-баллад. Появившись в альбоме- реюньоне KISS «Psycho Circus», известных как агрессивные исполнители, баллада «I Finally Found My Way» стала настоящим приятным сюрпризом. Успех сингла помог альбому «Psycho Circus» показать сильные результаты: занять — 3 место в Billboard 200 США, 2 место в Rock & Metal Singles Chart и Rock & Metal Albums Chart Великобритании и попасть в топ‑5 национальных чартов большинства стран Европы. Итог: Промо-сингл «I Finally Found My Way» — это гимн обретённой надежды, раскрывающий KISS с эмоциональной стороны. Эта прекрасная баллада обладает всеми ингредиентами настоящего хита: сильным вокалом Питера Крисса, запоминающейся мелодией, эмоциональной глубиной и универсальным посланием. «I Finally Found My Way» заняла почётное место в истории рок‑баллад и стала ещё одной знаковой композицией в дискографии KISS — важной частью наследия группы, демонстрируя её способность к эмоциональной глубине. Тем более, для поклонников группы, она уже является духовным преемником «Beth», и это мнение более чем оправдано. Оригинал остаётся эталоном, который не нуждается в радио‑редакции для расширения аудитории. Этот сингл — провозглашение: KISS по‑прежнему на вершине, их лиричная энергия не угасла, а талант — непревзойдён! <svg class='smile smile-kiss-2' style='width:24px;height:24px;vertical-align:text-bottom;' aria-hidden='true' focusable='false'><use xlink:href='/images/smiles.svg#smile-kiss-2'></use></svg> <svg class='smile smile-tongue-4' style='width:24px;height:24px;vertical-align:text-bottom;' aria-hidden='true' focusable='false'><use xlink:href='/images/smiles.svg#smile-tongue-4'></use></svg></p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/kirpichi-summertime-2013-388997#messages">
+                    <picture><source srcset="https://38s.musify.club/img/70/5217437/14236588.webp" type="image/webp" /><img src="https://38s.musify.club/img/70/5217437/14236588.jpg" alt="Summertime" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">shaitn <span class="text-xs text-text-muted">&#x43E;&#x43A;&#x43E;&#x43B;&#x43E; &#x447;&#x430;&#x441;&#x430; &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="2008 &#x41A;&#x430;&#x43C;&#x43D;&#x438; &#x43E;&#x434;&#x43D;&#x430;&#x43A;&#x43E;!">2008 Камни однако!</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/presence-uk-closer-2014-1251566#messages">
+                    <picture><source srcset="https://39s.musify.club/img/71/20444454/52467003.webp" type="image/webp" /><img src="https://39s.musify.club/img/71/20444454/52467003.jpg" alt="Closer" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">Dmitriy777666 <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="&#x41E;&#x447;&#x435;&#x43D;&#x44C; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x438;&#x439; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;, &#x434;&#x430;, &#x435;&#x441;&#x442;&#x44C; &#x447;&#x442;&#x43E; &#x442;&#x43E; &#x43E;&#x442; The Cure, &#x43D;&#x43E; &#x43D;&#x435; &#x442;&#x443;&#x43F;&#x43E;&#x435; &#x43A;&#x43E;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;, &#x443; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x44B; &#x43E;&#x434;&#x43D;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x43D;&#x43E; &#x435;&#x441;&#x442;&#x44C; &#x441;&#x432;&#x43E;&#x451; &#x43B;&#x438;&#x446;&#x43E;">Очень хороший альбом, да, есть что то от The Cure, но не тупое копирование, у группы однозначно есть своё лицо</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/airbourne-alive-after-death-last-plane-out-2026-2048411#messages">
+                    <picture><source srcset="https://39s.musify.club/img/71/32020730/78091724.webp" type="image/webp" /><img src="https://39s.musify.club/img/71/32020730/78091724.jpg" alt="Alive After Death (Last Plane Out)" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">walec2017 <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="&#x43A;&#x43B;&#x430;&#x441;&#x441;.">класс.</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/%D0%BA%D0%B8%D1%80%D0%BF%D0%B8%D1%87%D0%B8-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%B8%D1%80%D0%BF%D1%8B-%D0%BC%D0%BE%D0%BE-%D1%84%D0%BE%D0%BA-2011-212524#messages">
+                    <picture><source srcset="https://41s.musify.club/img/70/1153721/40236137.webp" type="image/webp" /><img src="https://41s.musify.club/img/70/1153721/40236137.jpg" alt="&#x41D;&#x43E;&#x432;&#x44B;&#x435; &#x41A;&#x438;&#x440;&#x43F;&#x44B; &#x41C;&#x43E;&#x43E; &#x424;&#x43E;&#x43A;" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">shaitn <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="&#x41A;&#x430;&#x43C;&#x43D;&#x438; &#x43F;&#x443;&#x442;&#x43D;&#x44B;&#x439;!">Камни путный!</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/hamish-stuart-real-live-2000-2056070#messages">
+                    <picture><source srcset="https://40s.musify.club/img/68/32206436/78378569.webp" type="image/webp" /><img src="https://40s.musify.club/img/68/32206436/78378569.jpg" alt="Real Live" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x421;&#x442;&#x430;&#x440;&#x438;&#x447;&#x43E;&#x43A; &#x41A;&#x430;&#x446; <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="&#x41A;&#x43E;&#x43D;&#x446;&#x435;&#x440;&#x442;&#x43D;&#x44B;&#x439; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x437; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x439; Average White Band">Концертный альбом одного из основателей Average White Band</p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/melodica-love-metal-2001-434614#messages">
+                    <picture><source srcset="https://39s.musify.club/img/70/5990704/18161529.webp" type="image/webp" /><img src="https://39s.musify.club/img/70/5990704/18161529.jpg" alt="Love Metal" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">&#x410;&#x43B;&#x435;&#x43A;&#x441;&#x430;&#x43D;&#x434;&#x440; &#x420;&#x443;&#x441;&#x430;&#x43D;&#x43E;&#x432; <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="&#x41A;&#x43B;&#x430;&#x441;&#x441;&#x43D;&#x44B;&#x439; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C;! &#x41D;&#x438;&#x447;&#x443;&#x442;&#x44C; &#x43D;&#x435; &#x445;&#x443;&#x436;&#x435; &#x441;&#x430;&#x43C;&#x438;&#x445; Danger Danger! :057-music-1: :057-music-1: :057-music-1:">Классный альбом! Ничуть не хуже самих Danger Danger! <svg class='smile smile-music-1' style='width:24px;height:24px;vertical-align:text-bottom;' aria-hidden='true' focusable='false'><use xlink:href='/images/smiles.svg#smile-music-1'></use></svg> <svg class='smile smile-music-1' style='width:24px;height:24px;vertical-align:text-bottom;' aria-hidden='true' focusable='false'><use xlink:href='/images/smiles.svg#smile-music-1'></use></svg> <svg class='smile smile-music-1' style='width:24px;height:24px;vertical-align:text-bottom;' aria-hidden='true' focusable='false'><use xlink:href='/images/smiles.svg#smile-music-1'></use></svg></p>
+                    </div>
+                </a>
+                <a class="flex items-center gap-3 py-2 rounded px-1 transition-colors hover:bg-surface-secondary" href="/release/peter-frampton-carry-the-light-2026-2051289#messages">
+                    <picture><source srcset="https://39s.musify.club/img/71/32090514/78188269.webp" type="image/webp" /><img src="https://39s.musify.club/img/71/32090514/78188269.jpg" alt="Carry The Light" class="w-12 h-12 rounded object-cover shrink-0" width="48" height="48" loading="lazy" /></picture>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-text-primary truncate">MOREISLESS <span class="text-xs text-text-muted">2 &#x447;&#x430;&#x441;. &#x43D;&#x430;&#x437;&#x430;&#x434;</span></div>
+                        <p class="text-sm text-text-secondary truncate" title="Carry The Light (2026) &#x2014; &#x432; &#x446;&#x435;&#x43B;&#x43E;&#x43C; &#x44D;&#x442;&#x43E; &#x43E;&#x434;&#x438;&#x43D; &#x438;&#x437; &#x441;&#x430;&#x43C;&#x44B;&#x445; &#x442;&#x435;&#x43F;&#x43B;&#x43E; &#x43F;&#x440;&#x438;&#x43D;&#x44F;&#x442;&#x44B;&#x445; &#x435;&#x433;&#x43E; &#x43F;&#x43E;&#x437;&#x434;&#x43D;&#x438;&#x445; &#x440;&#x435;&#x43B;&#x438;&#x437;&#x43E;&#x432;, &#x438; &#x43F;&#x43E;&#x447;&#x442;&#x438; &#x432;&#x441;&#x435; &#x440;&#x435;&#x446;&#x435;&#x43D;&#x437;&#x438;&#x438; &#x441;&#x445;&#x43E;&#x434;&#x44F;&#x442;&#x441;&#x44F; &#x43D;&#x430; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x438;&#x445; &#x432;&#x435;&#x449;&#x430;&#x445; : &#x44D;&#x442;&#x43E; &#x43D;&#x435; &#x43F;&#x43E;&#x43F;&#x44B;&#x442;&#x43A;&#x430; &#x201C;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x44C;&#x441;&#x44F; &#x432; 70-&#x435;&#x201D;, &#x430; &#x437;&#x440;&#x435;&#x43B;&#x44B;&#x439; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x430;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x443;&#x436;&#x435; &#x43F;&#x440;&#x43E;&#x448;&#x451;&#x43B; &#x43F;&#x438;&#x43A; &#x441;&#x43B;&#x430;&#x432;&#x44B;, &#x431;&#x43E;&#x43B;&#x435;&#x437;&#x43D;&#x438; &#x438; &#x43F;&#x435;&#x440;&#x435;&#x43E;&#x441;&#x43C;&#x44B;&#x441;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x2014; &#x438; &#x432;&#x441;&#x451; &#x435;&#x449;&#x451; &#x43F;&#x438;&#x448;&#x435;&#x442; &#x436;&#x438;&#x432;&#x443;&#x44E;, &#x432;&#x434;&#x43E;&#x445;&#x43D;&#x43E;&#x432;&#x43B;&#x451;&#x43D;&#x43D;&#x443;&#x44E; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x443;. &#x41F;&#x440;&#x430;&#x43A;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x432;&#x441;&#x435; &#x43E;&#x442;&#x43C;&#x435;&#x447;&#x430;&#x44E;&#x442;, &#x447;&#x442;&#x43E; &#x430;&#x43B;&#x44C;&#x431;&#x43E;&#x43C; &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x43E; &#x443;&#x441;&#x438;&#x43B;&#x438;&#x432;&#x430;&#x44E;&#x442; &#x43F;&#x440;&#x438;&#x433;&#x43B;&#x430;&#x448;&#x451;&#x43D;&#x43D;&#x44B;&#x435; &#x43C;&#x443;&#x437;&#x44B;&#x43A;&#x430;&#x43D;&#x442;&#x44B;: Tom Morello &#x2014; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x430;&#x433;&#x440;&#x435;&#x441;&#x441;&#x438;&#x44E; Graham Nash &#x2014; &#x43B;&#x438;&#x440;&#x438;&#x43A;&#x430; &#x438; &#x43C;&#x44F;&#x433;&#x43A;&#x43E;&#x441;&#x442;&#x44C; H.E.R. &#x2014; &#x430;&#x442;&#x43C;&#x43E;&#x441;&#x444;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;&#x44B; Sheryl Crow, Bill Evans &#x438; &#x434;&#x440;. &#x41D;&#x43E; &#x432;&#x430;&#x436;&#x43D;&#x44B;&#x439; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;: &#x424;&#x440;&#x44D;&#x43C;&#x43F;&#x442;&#x43E;&#x43D; &#x43D;&#x435; &#x442;&#x435;&#x440;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43D;&#x430; &#x438;&#x445; &#x444;&#x43E;&#x43D;&#x435;, &#x43E;&#x43D; &#x432;&#x441;&#x451; &#x440;&#x430;&#x432;&#x43D;&#x43E; &#x432; &#x446;&#x435;&#x43D;&#x442;&#x440;&#x435;. &#x42D;&#x442;&#x43E; &#x43D;&#x435; &#x201C;&#x43D;&#x43E;&#x432;&#x44B;&#x439; Frampton Comes Alive&#x201D;, &#x430; &#x441;&#x43A;&#x43E;&#x440;&#x435;&#x435; &#x437;&#x440;&#x435;&#x43B;&#x430;&#x44F;, &#x441;&#x43F;&#x43E;&#x43A;&#x43E;&#x439;&#x43D;&#x430;&#x44F;, &#x443;&#x432;&#x435;&#x440;&#x435;&#x43D;&#x43D;&#x430;&#x44F; &#x43F;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x43D;&#x43A;&#x430; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;&#x430;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x432;&#x441;&#x451; &#x435;&#x449;&#x451; &#x443;&#x43C;&#x435;&#x435;&#x442; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x441;&#x438;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x43C;&#x435;&#x43B;&#x43E;&#x434;&#x438;&#x438;, &#x43D;&#x43E; &#x443;&#x436;&#x435; &#x43D;&#x435; &#x434;&#x43E;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x43D;&#x438;&#x447;&#x435;&#x433;&#x43E; &#x43D;&#x438;&#x43A;&#x43E;&#x43C;&#x443;. &#x414;&#x43B;&#x44F; &#x43F;&#x43E;&#x437;&#x434;&#x43D;&#x435;&#x433;&#x43E; &#x44D;&#x442;&#x430;&#x43F;&#x430; &#x43A;&#x430;&#x440;&#x44C;&#x435;&#x440;&#x44B
