@@ -1,9 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Envelope from './components/Envelope';
 import LoginAmor from './components/LoginAmor';
-import Polaroid from "./components/Polaroid.jsx";
-
-
 
 const HeartIcon = ({ size = 24, strokeWidth = 1, color = "currentColor", className = "" }) => (
     <svg
@@ -22,17 +19,19 @@ const HeartIcon = ({ size = 24, strokeWidth = 1, color = "currentColor", classNa
     </svg>
 );
 
-
 function App() {
     const [amor, setAmor] = useState(false);
+
+    useEffect(() => {
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', amor ? '#fdf2f8' : '#eb3434');
+    }, [amor]);
+
     return (
         <main className="relative min-h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4">
-
             {!amor && <LoginAmor onConfirm={() => setAmor(true)} />}
-            <Envelope/>
-            <h1 className={"text-xs md:text-sm"}>Eu sabia! Obrigado por me fazer tão feliz.</h1>
-
-
+            <Envelope />
+            <h1 className="text-xs md:text-sm">Eu sabia! Obrigado por me fazer tão feliz.</h1>
         </main>
     );
 }

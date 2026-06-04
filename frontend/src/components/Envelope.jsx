@@ -58,7 +58,7 @@ const Envelope = () => {
                         clipPath: 'polygon(0% 0%, 100% 0, 100% 4%, 50% 60%, 0 4%)',
                         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E"),
                                           linear-gradient(to bottom, #eb3434, #ff8585)`,
-                        transform: (state !== 'fechado') ? 'rotateX(180deg)' : 'rotateX(0deg)',
+                        transform: state !== 'fechado' ? 'scaleY(-1)' : 'scaleY(1)',
                         zIndex: (state !== 'fechado') ? 0 : 30,
                         transitionDelay: (state !== 'fechado') ? '150ms' : '0ms'
                     }}
