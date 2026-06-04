@@ -12,7 +12,8 @@ const LoginAmor = ({ onConfirm }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-[#eb3434] flex items-center justify-center z-50 p-4 min-h-[100dvh]">
+        <div className="fixed inset-0 bg-[#eb3434] flex items-center justify-center z-50 p-4"
+             style={{ height: '100dvh' }}>
             <div className="bg-white rounded-2xl border border-pink-100 shadow-xl p-10 md:max-w-sm w-full text-center flex flex-col ustify-center items-center">
                 <div className="text-4xl mb-4 text-[#eb3434]"><GoHeart /></div>
                 <p className="font-serif text-2xl italic text-gray-700 mb-1">Você me ama?</p>

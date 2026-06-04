@@ -26,8 +26,7 @@ const HeartIcon = ({ size = 24, strokeWidth = 1, color = "currentColor", classNa
 function App() {
     const [amor, setAmor] = useState(false);
     return (
-        <main className={`relative w-full flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4 min-h-[100dvh] transition-colors duration-700
-                            ${amor ? 'bg-pink-50' : 'bg-[#eb3434]'}`}>
+        <main className="relative min-h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4">
 
             {!amor && <LoginAmor onConfirm={() => setAmor(true)} />}
             <Envelope/>
