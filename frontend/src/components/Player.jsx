@@ -40,7 +40,7 @@ const Player = ({ cover, title, singer, src, autoPlay = false, loop = false}) =>
                 </div>
             </div>
 
-            <div className={"w-1 h-full bg-white/75"}></div>
+
 
             <button onClick={togglePlay} className={"flex hover:scale-110 transition-all ease-in-out hover:cursor-pointer text-white text:sm md:text-xl aspect-square justify-center items-center"}>
                 {playing ? <FaPause  /> : <FaPlay  />}

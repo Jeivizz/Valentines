@@ -12,10 +12,7 @@ const LoginAmor = ({ onConfirm }) => {
     };
 
     return (
-        <div className="fixed w-full h-full flex items-center justify-center z-50 p-4"
-                style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E"),
-                                          linear-gradient(to bottom, #eb3434, #ff8585)`,}}
-        >
+        <div className="fixed inset-0  bg-red-400 flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-2xl border border-pink-100 shadow-xl p-10 md:max-w-sm w-full text-center flex flex-col ustify-center items-center">
                 <div className="text-4xl mb-4 text-[#eb3434]"><GoHeart /></div>
                 <p className="font-serif text-2xl italic text-gray-700 mb-1">Você me ama?</p>

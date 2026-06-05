@@ -14,8 +14,8 @@ function App() {
 
     useEffect(() => {
         const meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute('content', amor ? '#fdf2f8' : '#eb3434');
-        document.body.style.backgroundColor = amor ? '#fdf2f8' : '#eb3434';
+        if (meta) meta.setAttribute('content', amor ? '#fdf2f8' : '#ff6467');
+        document.body.style.backgroundColor = amor ? '#fdf2f8' : '#ff6467';
     }, [amor]);
 
     const audioRef = useRef(null);
@@ -30,7 +30,7 @@ function App() {
             className="relative h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-4">
             {!amor && <LoginAmor onConfirm={handleConfirm} />}
             <Envelope/>
-            <h1 className="text-xs md:text-sm text-red-800">Eu também te amo! Agora, abra a carta </h1>
+            <h1 className="text-xs md:text-sm text-red-800/75">Eu também te amo! Agora, abra a carta </h1>
 
             <div className="absolute top-4 left-1/2 -translate-x-1/2 z-45 w-[80%] md:w-auto px-4 md:px-0">
                 <Player cover={superCapa} title={"Alinhamento Milenar"} singer={"Jão"} src={musica} autoPlay={amor} loop={true} />
