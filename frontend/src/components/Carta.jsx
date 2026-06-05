@@ -10,10 +10,10 @@ import Polaroid from "./Polaroid.jsx";
 
 const Modal = ({onClose }) => createPortal(
     <div
-        className="fixed w-screen h-screen inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
+        className="fixed w-screen h-screen inset-0 bg-black/60 z-40 flex items-center justify-center p-4"
     >
-        <Polaroid src={foto1} className="z-20 absolute md:left-120 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
-        <Polaroid src={foto2} className="z-0 absolute md:left-280 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto2} className="z-0 absolute md:left-290 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
 
         <div className={"z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-xs md:text-sm  shadow-2xl"}
              style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,}}
@@ -82,7 +82,6 @@ const Carta = ({isOut, onAbrir, onGuardar }) => {
                                 </div>
                             )}
 
-                            {/* Botão Abrir quando carta ainda está dentro do envelope */}
                             {!isOut && (
                                 <div className="pointer-events-auto">
                                     <Button
