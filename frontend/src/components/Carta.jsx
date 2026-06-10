@@ -9,7 +9,6 @@ import Polaroid from "./Polaroid.jsx";
 
 
 const Modal = ({ onClose }) => createPortal(
-
     <div className="fixed inset-0 min-h-dvh w-screen z-40 flex items-center justify-center p-4 font-neucha overflow-hidden">
 
         <div
@@ -17,8 +16,9 @@ const Modal = ({ onClose }) => createPortal(
             onClick={onClose}
         />
 
+
         <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
-        <Polaroid src={foto2} className="z-20 absolute md:left-290 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto2} className="z-20 absolute md:left-320 md:bottom-40 bottom-30 left-25 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
 
         <div
             className="z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm shadow-2xl"

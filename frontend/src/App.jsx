@@ -27,7 +27,7 @@ function App() {
 
     return (
         <main
-            className="relative h-[100dvh] w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-2">
+            className="relative h-dvh w-full bg-pink-50 flex flex-col items-center justify-center p-4 overflow-hidden font-mono gap-2">
             {!amor && <LoginAmor onConfirm={handleConfirm} />}
             <section className={"w-full h-2/3 md:h-1/2 -mx-4 -mt-4 absolute z-0 top-0"}>
                 <div className={"w-full h-full bg-linear-to-b from-red-400 to-[#ffa9a9]"}></div>
