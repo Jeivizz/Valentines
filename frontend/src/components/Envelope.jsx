@@ -8,7 +8,7 @@ import Polaroid from "./Polaroid.jsx";
 const Envelope = () => {
     const [state, setState] = useState('fechado');
 
-    // Função para a ABA e CORPO (Fundo)
+
     const handleEnvelopeClick = () => {
         if (state === 'fechado') {
             setState('abaAberta');
@@ -17,15 +17,14 @@ const Envelope = () => {
         }
     };
 
-    // Função específica para a CARTA
+
     const handleCartaClick = (e) => {
-        // CRITICAL: Impede que o clique chegue no envelope (pai)
         e.stopPropagation();
 
         if (state === 'abaAberta') {
             setState('cartaFora');
         } else if (state === 'cartaFora') {
-            setState('abaAberta'); // Coloca a carta de volta
+            setState('abaAberta');
         }
     };
 

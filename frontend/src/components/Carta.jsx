@@ -11,13 +11,12 @@ import Polaroid from "./Polaroid.jsx";
 const Modal = ({onClose }) => createPortal(
     <div
         className="fixed top-0 left-0 right-0 bottom-0 min-h-dvh w-full bg-black/60 z-40 flex items-center justify-center p-4 font-neucha"
-        onClick={onClose} // Fecha o modal se clicar no fundo escuro
+        onClick={onClose}
     >
-        {/* Mantendo suas Polaroids */}
+
         <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
         <Polaroid src={foto2} className="z-0 absolute md:left-290 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
 
-        {/* Paramos a propagação aqui para o clique na carta não fechar o modal por acidente */}
         <div
             className="z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm shadow-2xl"
             onClick={(e) => e.stopPropagation()}
