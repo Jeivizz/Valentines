@@ -30,7 +30,7 @@ const Envelope = () => {
     };
 
     return (
-        <div className="relative w-full max-w-lg aspect-4/3 flex flex-col items-center justify-center" style={{ perspective: '1200px', perspectiveOrigin: '50% 0%' }}>
+        <div className="relative w-full max-w-lg aspect-4/3 flex flex-col items-center justify-center z-10 " style={{ perspective: '1200px', perspectiveOrigin: '50% 0%' }}>
             <div
                 className={`shadow-lg relative w-full h-full bg-[#eb3434] cursor-pointer overflow-visible transition-all duration-500 rounded-b-3xl  transform-gpu
                 ${state !== 'fechado' ? 'translate-y-20' : 'translate-y-0'}`}

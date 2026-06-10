@@ -10,18 +10,18 @@ import Polaroid from "./Polaroid.jsx";
 
 const Modal = ({onClose }) => createPortal(
     <div
-        className="fixed w-screen h-screen inset-0 bg-black/60 z-40 flex items-center justify-center p-4"
+        className="fixed w-screen h-screen inset-0 bg-black/60 z-40 flex items-center justify-center p-4 font-neucha"
     >
         <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
         <Polaroid src={foto2} className="z-0 absolute md:left-290 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
 
-        <div className={"z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-xs md:text-sm  shadow-2xl"}
+        <div className={"z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm  shadow-2xl"}
              style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,}}
         >
 
 
 
-            <div className="w-full flex flex-col text-center p-4 border-2 border-dashed border-pink-200" onClick={(e) => e.stopPropagation()} style={{ animation: 'popIn 0.25s ease' }}>
+            <div className="w-full flex flex-col text-center p-4 border-2 border-dashed border-red-500/25" onClick={(e) => e.stopPropagation()} style={{ animation: 'popIn 0.25s ease' }}>
                 <div className={"flex justify-between items-center mb-2"}>
                     <h3 className={"text-red-400 italic "}>Mossoró-RN, 12 de Junho de 2026</h3>
                     <Button onClick={onClose} className="border-red-400 text-red-400 hover:scale-110 transition-all ease-in-out hover:cursor-pointer">
@@ -54,13 +54,13 @@ const Carta = ({isOut, onAbrir, onGuardar }) => {
 
             <div
                 onClick={onAbrir}
-                className={`absolute inset-x-0 mx-auto w-[92%] h-[95%] bg-yellow-50 p-3 transition-all duration-700 ease-in-out z-10 rounded-sm shadow-inner flex items-center justify-center text-xs md:text-sm overflow-hidden
+                className={`font-neucha absolute inset-x-0 mx-auto w-[92%] h-[95%] bg-yellow-50 p-3 transition-all duration-700 ease-in-out z-10 rounded-sm shadow-inner flex items-center justify-center text-sm overflow-hidden
                     ${isOut ? '-translate-y-1/2 scale-105 shadow-2xl' : 'translate-y-0 cursor-pointer'}`}
                 style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,
                 }}
             >
-                <div className="relative bg-transparent border-2 border-dashed border-pink-200 h-full w-full flex flex-col gap-4 p-4 ">
+                <div className="relative bg-transparent border-2 border-dashed border-red-500/25 h-full w-full flex flex-col gap-4 p-4 text-sm">
 
                     <div className={"flex justify-between items-center"}>
                         <h3 className={"text-red-400 italic"}>Mossoró-RN, 12 de Junho de 2026</h3>
