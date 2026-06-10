@@ -1,7 +1,6 @@
 import react, {useEffect, useState, useRef} from 'react';
 import { FaPlay, FaPause } from 'https://esm.sh/react-icons/fa';
-import { TbMusic, TbMusicOff } from 'https://esm.sh/react-icons/tb';
-import Button from "./Button.jsx";
+
 
 const Player = ({ cover, title, singer, src, autoPlay = false, loop = false}) => {
     const audioRef = useRef(null);
@@ -20,8 +19,7 @@ const Player = ({ cover, title, singer, src, autoPlay = false, loop = false}) =>
     }, [autoPlay]);
 
     return (
-        <div className={"w-full flex shadow-lg  p-2 gap-2 italic  h-16 bg-white rounded md:rounded-lg"} style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E"),
-                                          linear-gradient(to top left,  #ff6b6b, #ffaaaa`,}}>
+        <div className={"w-full flex  p-2 gap-2 italic h-16 rounded md:rounded-lg bg-transparent"} >
 
             <audio
                 ref = {audioRef}
@@ -42,7 +40,7 @@ const Player = ({ cover, title, singer, src, autoPlay = false, loop = false}) =>
 
 
 
-            <button onClick={togglePlay} className={"flex hover:scale-110 transition-all ease-in-out hover:cursor-pointer text-white text:sm md:text-xl aspect-square justify-center items-center"}>
+            <button onClick={togglePlay} className={"flex hover:scale-110 transition-all ease-in-out hover:cursor-pointer text-white text:sm md:text-xl aspect-square justify-end items-center"}>
                 {playing ? <FaPause  /> : <FaPlay  />}
             </button>
 
