@@ -18,7 +18,7 @@ function Polaroid({ src, className = "" }) {
     return (
         <div
             ref={polaroidRef}
-            className={`absolute aspect-3/4 bg-white w-36 p-2 shadow-red-950/50 shadow-lg select-none touch-none cursor-grab active:cursor-grabbing will-change-transform ${rotation} ${cleanClassName}`}
+            className={`absolute bg-white w-36 p-2 pb-6 shadow-red-950/50 shadow-lg select-none touch-none cursor-grab active:cursor-grabbing will-change-transform h-auto ${rotation} ${cleanClassName}`}
             style={{ backfaceVisibility: 'hidden' }}
         >
             <div className="bg-white aspect-square overflow-hidden pointer-events-none">
