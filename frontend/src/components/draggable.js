@@ -30,14 +30,18 @@ export function dragElement(elmnt) {
         var newTop = elmnt.offsetTop - pos2;
         var newLeft = elmnt.offsetLeft - pos1;
 
-        var maxLeft = window.innerWidth - elmnt.offsetWidth;
-        var maxTop = window.innerHeight - elmnt.offsetHeight;
+        var rect = elmnt.getBoundingClientRect();
+        var parentRect = elmnt.parentElement.getBoundingClientRect();
+
+        var maxLeft = parentRect.width - rect.width;
+        var maxTop = parentRect.height - rect.height;
 
         if (newLeft < 0) newLeft = 0;
         if (newTop < 0) newTop = 0;
         if (newLeft > maxLeft) newLeft = maxLeft;
         if (newTop > maxTop) newTop = maxTop;
 
+        elmnt.style.transform = "translate3d(0, 0, 0)";
         elmnt.style.top = newTop + "px";
         elmnt.style.left = newLeft + "px";
     }
