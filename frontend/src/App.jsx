@@ -34,7 +34,6 @@ function App() {
                 <div className={"shapedividers_com-1943 w-full h-full"}></div>
             </section>
             <Envelope/>
-            <h1 className="text-xs md:text-sm text-white md:text-red-500 z-0">Eu também te amo! Agora, abra a carta </h1>
 
             <div className="absolute top-4 left-1/2 -translate-x-1/2 z-45 w-[80%] md:w-auto px-4 md:px-0">
                 <Player cover={superCapa} title={"Alinhamento Milenar"} singer={"Jão"} src={musica} autoPlay={amor} loop={true} />

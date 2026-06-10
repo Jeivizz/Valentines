@@ -10,25 +10,28 @@ import Polaroid from "./Polaroid.jsx";
 
 const Modal = ({onClose }) => createPortal(
     <div
-        className="fixed w-screen h-screen inset-0 bg-black/60 z-40 flex items-center justify-center p-4 font-neucha"
+        className="fixed top-0 left-0 right-0 bottom-0 min-h-dvh w-full bg-black/60 z-40 flex items-center justify-center p-4 font-neucha"
+        onClick={onClose} // Fecha o modal se clicar no fundo escuro
     >
+        {/* Mantendo suas Polaroids */}
         <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
         <Polaroid src={foto2} className="z-0 absolute md:left-290 top-35 left-63 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
 
-        <div className={"z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm  shadow-2xl"}
-             style={{backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,}}
+        {/* Paramos a propagação aqui para o clique na carta não fechar o modal por acidente */}
+        <div
+            className="z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.20'/%3E%3C/svg%3E")`,
+            }}
         >
-
-
-
-            <div className="w-full flex flex-col text-center p-4 border-2 border-dashed border-red-500/25" onClick={(e) => e.stopPropagation()} style={{ animation: 'popIn 0.25s ease' }}>
-                <div className={"flex justify-between items-center mb-2"}>
-                    <h3 className={"text-red-400 italic "}>Mossoró-RN, 12 de Junho de 2026</h3>
+            <div className="w-full flex flex-col text-center p-4 border-2 border-dashed border-red-500/25" style={{ animation: 'popIn 0.25s ease' }}>
+                <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-red-400 italic">Mossoró-RN, 12 de Junho de 2026</h3>
                     <Button onClick={onClose} className="border-red-400 text-red-400 hover:scale-110 transition-all ease-in-out hover:cursor-pointer">
                         <FaTimes/>
                     </Button>
                 </div>
-
 
                 <Mensagem />
             </div>
