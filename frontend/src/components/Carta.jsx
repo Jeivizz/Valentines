@@ -12,7 +12,7 @@ const Modal = ({ onClose }) => createPortal(
     <div className="fixed inset-0 min-h-dvh w-screen z-40 flex items-center justify-center p-4 font-neucha overflow-hidden">
 
         <div
-            className="absolute inset-0 bg-black/60 z-0"
+            className="absolute bg-linear-to-b from-black/60 to-bg-transparent inset-0 z-0"
             onClick={onClose}
         />
 
