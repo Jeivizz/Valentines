@@ -5,7 +5,7 @@ const LoginAmor = ({ onConfirm }) => {
     const [confirmed, setConfirmed] = useState(false);
     const [naoClicks, setNaoClicks] = useState(0);
 
-    const mensagens = ['Pense bem antes de responder <3', 'VOCÊ ME AMA?', 'Pense novamente...', 'Fui mais esperto que você'];
+    const mensagens = ['Pense bem antes de responder <3', 'VOCÊ ME AMA?', 'Pense novamente...', 'Vai me amar sim!'];
 
     const handleNao = () => {
         if (naoClicks < 3) setNaoClicks(prev => prev + 1);

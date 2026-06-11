@@ -3,8 +3,9 @@ import { createPortal } from 'react-dom';
 import Button from './Button';
 import Mensagem from "./Mensagem.jsx";
 import { FaTimes, FaRegEye, FaArrowUp, FaArrowDown } from 'https://esm.sh/react-icons/fa';
-import foto1 from '../assets/foto1.jpg';
+import foto1 from '../assets/foto1.jpeg';
 import foto2 from '../assets/foto2.jpg';
+import foto3 from '../assets/foto3.jpeg';
 import Polaroid from "./Polaroid.jsx";
 
 
@@ -17,8 +18,10 @@ const Modal = ({ onClose }) => createPortal(
         />
 
 
-        <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-5 -rotate-45 shadow-lg md:scale-100 scale-75" />
-        <Polaroid src={foto2} className="z-20 absolute md:left-320 md:bottom-40 bottom-30 left-25 -translate-x-1/2 rotate-15 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto1} className="z-20 absolute md:left-150 md:bottom-40 bottom-30 left-0 -rotate-15 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto2} className="z-20 absolute md:left-320 md:bottom-40 bottom-30 left-5 rotate-15 shadow-lg md:scale-100 scale-75" />
+        <Polaroid src={foto3} className="z-20 absolute md:left-320 md:bottom-100 bottom-25 left-10  rotate-45 shadow-lg md:scale-100 scale-75" />
+
 
         <div
             className="z-10 bg-yellow-50 rounded p-2 w-full md:w-1/3 text-sm shadow-2xl"

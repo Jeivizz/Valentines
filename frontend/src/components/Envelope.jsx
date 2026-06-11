@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Carta from './Carta';
-import foto1 from '../assets/foto1.jpg';
+import foto1 from '../assets/foto1.jpeg';
 import foto2 from '../assets/foto2.jpg';
+import foto3 from '../assets/foto3.jpeg';
 import Polaroid from "./Polaroid.jsx";
 
 
@@ -47,9 +48,11 @@ const Envelope = () => {
                 />
 
 
-                    <div className="absolute inset-0 z-10 pointer-events-none  overflow-hidden">
-                        <Polaroid src={foto1} className="absolute top-4 left-4 -rotate-6 shadow-lg" />
+                    <div className="absolute inset-0 z-10 pointer-events-none  overflow-hidden scale-75">
+                        <Polaroid src={foto1} className="absolute top-5 left-4 -rotate-6 shadow-lg" />
                         <Polaroid src={foto2} className="absolute top-10 left-[40%] -translate-x-1/2 rotate-15 shadow-lg" />
+                        <Polaroid src={foto3} className="absolute top-15 left-[40%] -translate-x-1/2 rotate-45 shadow-lg" />
+
                     </div>
 
 
